@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="itzc_title">
+        <item>员工如需重置密码怎么办？</item>
+        <item>访客要使用公司网络怎么办？</item>
+        <item>员工如何申请Lync相关权限？</item>
+        <item>如何注册Symantec Vip？</item>
+        <item>如何更改座位端口vlan或者meeting room vlan?</item>
+        <item>如何申请Wi-Fi？</item>
+        <item>如果非正式员工outlook客户端版不好用怎么办？</item>
+        <item>员工如需申请项目share folder权限怎么办？</item>
+        <item>员工如何申请电话长途密码（IDD Code）？</item>
+        <item>如何开通USB？</item>
+    </string-array>
+    <string-array name="itzc_content">
+        <item>自助服务： 埃森哲员工可以通过访问 https://mypasswordreset.accenture.com/ 重置个人密码。 请求IW密码重置服务： 若用户本人在办公室： 密码重置和账户解锁服务只能由以下用户提出申请： 用户本人/HR PA/项目指定联系人/Accenture Leadership/career level 6-9； 如果经理或career level 9以上的员工可以提供担保，用户需要将电话递交给担保人进行身份验证，IW工程师将通过职务级别/EID/Portal注册手机号等信息来验证担保人身份； 重置成功后，会将新密码告知用户本人。 若户本人不在办公室： IW工程师将检查用户手机号码与Portal注册号码是否匹配，并且进行以下任一项验证步骤： 员工号码(SAP Number) 入职日期（仅年月信息） 验证成功后，会将新密码告知用户本人。</item>
+        <item>使用会议室网络： 可以通过拨打57777 或者https://accentureinternal.service-now.com/isa/ 创建case，Workstation team将会检查客户电脑(如病毒和P2P软件) 使用项目网络： 需要项目经理批准，然后发信给IT security负责人(yan.a.liu)去进一步follow。 使用会议室Wi-Fi 网络： 项目可以通过https://myexpresslane.accenture.com/ 创建request。 如果项目经理批准，IT 网络组会帮助用户创建Wi-Fi-guest账号的密码。</item>
+        <item>用户如需申请 Lync IM或者Lync Call的功能： 通过https://myexpresslane.accenture.com 创建request 项目经理批准后，IT team 将会进行后续操作。 用户如需申请Lync Video 或者share desktop功能： 通过https://myexpresslane.accenture.com 创建request 需要Senior Manager经理批准和有效的wbs code，之后IT team会帮助添加权限。 (费用：Video为4$/month, Share desktop 为2$/month) 用户如需申请Lync PE功能： 填写下表，将邮件发送给James.jianwei.Li；费用为：9$/month。</item>
+        <item>通过https://federation-sts.accenture.com/vip/contacts, 登记或者更新电话信息， 格式：+86 手机号（+86 后面有空格），更新后需要一段时间才能将信息同步到网站。 如果确认电话信息已保存并成功更新到上述网站，请访问https://go.accenture.com/symantecvip_portal ，验证手机收到的security code之后，选择注册device去完成注册。</item>
+        <item>如需更改座位端口： 用户可通过拨打57777 或者https://accentureinternal.service-now.com/isa/ 创建case 提供端口号和目标项目名字，之后IT team会进行后续操作。 如需更改meeting room 端口 用户可以通过拨打 57777 或者https://accentureinternal.service-now.com/isa/ 创建case 提供端口号和目标项目名字以及使用时间，IT team确认信息后会进行后续操作。</item>
+        <item>用户如需开通笔记本Wi-Fi功能： 通过https://myexpresslane.accenture.com 创建request 项目经理批准之后，IT team会进行操作。 用户如需申请 Shared meeting room Wi-Fi service（Wi-Fi-DC-Data）： Level 7 or above 默认即有权限，无需再次申请。 低于Level 7的员工，可通过https://myexpresslane.accenture.com 创建request， 需要项目经理批准和有效的wbs code，之后IT Team会添加权限，费用为5$/month/person. 如需为客户申请Wi-Fi： 通过https://myexpresslane.accenture.com 创建request给network team， 项目经理批准之后，IT 网络组会创建Wi-Fi-guest账号的密码。 Notes：WIFI Service is now available in the meeting rooms of following areas</item>
+        <item>非正式员工或者实习生只有网页版权限。 如需申请客户端版权限，可以通过https://accentureinternal.service-now.com/dsrm/ 提交申请， 需要有效的wbs code和项目经理或者以上的批准。</item>
+        <item>通过https://myexpresslane.accenture.com 创建request给IT Sever team，提供要申请的share folder路径和要访问者的Enterprise ID。 若项目经理在网站批准，IT服务器组将会follow此request，并帮助用户添加相应的权限。</item>
+        <item>通过https://myexpresslane.accenture.com 创建request给collaboration组。 若项目经理在网站批准，IT 会帮助用户创建IDD Code。</item>
+        <item>低于MD level的员工，USB的默认权限为只读；MD Level的USB默认权限为不加密读和加密写的权限。 如果用户要申请USB读写加密权限： 发信到CDP（clientdataprotection@accenture.com） 得到CDP批准之后，通过https://myexpresslane.accenture.com log a request 到workstation，随后IT workstation会帮助用户开通权限。 如果用户要申请USB临时权限（低于7天）： CDC：需要得到china.swf.security team批准，通过https://myexpresslane.accenture.com 创建request到workstation。 BPO：需要得到Kevin. Wang的批准，通过https://myexpresslane.accenture.com 创建request到workstation。 AEE：需要得到Zhihong.zhao的批准，通过https://myexpresslane.accenture.com 创建request到workstation。</item>
+    </string-array>
+    <string-array name="cwzx_title">
+        <item>员工忘带门禁卡了怎么办？</item>
+        <item>门禁卡丢失或者损坏了怎么处理？</item>
+        <item>如何申请照片卡？</item>
+        <item>如何领取（推柜、文件柜）钥匙？钥匙是否可以代领？</item>
+        <item>如何领取报销信封？</item>
+        <item>员工有彩打的需求如何提交和领取？</item>
+        <item>员工可以借用哪些会议室设备？</item>
+        <item>会议室设备如何借用和归还，如果发生丢失或损坏如何处理？</item>
+        <item>员工/访客如何寄存行李/物品？</item>
+    </string-array>
+    <string-array name="cwzx_content">
+        <item>员工可以到1楼服务中心办理临时门禁卡, 办理同时需要项目陪同员工的签字确认。 （Renesas项目的同事需要到1楼大堂的保安处办理）</item>
+        <item>员工发送邮件到 cn.facilities@accenture.com提出补卡或更换新卡申请。 收到回复邮件”Your service request is resolved”通知后到1楼服务中心领取新门禁卡。 （100元补卡费用将在员工当月工资中扣除）</item>
+        <item>员工将个人电子照片发送到cn.facilities@accenture.com并提出照片卡申请。 收到回复邮件”Your service request is resolved”通知后到1楼服务中心领取照片卡。</item>
+        <item>员工到1楼服务中心填写相应表格后方可领取。 ※必须本人领取</item>
+        <item>员工到1楼服务中心填写相应表格后方可领取。 ※每人每次最多领取3个，不可代领</item>
+        <item>将WBS code和需要打印的文件发送到cn.facilities@accenture.com 收到回复邮件”Your service request is resolved”通知后到1楼服务中心领取打印文件。</item>
+        <item>VGA线（投影仪用），HDMI线（电视用），激光笔，麦克风，视频转换器。</item>
+        <item>员工到1楼服务中心填写相应表格后可以领取和归还会议室设备。 ※若出现丢失或损坏，员工需要根据借用物品的价格进行赔偿。</item>
+        <item>员工/访客可以到1楼服务中心填写相应表格后进行行李/物品的寄存。</item>
+    </string-array>
+    <string-array name="rlzy_title">
+        <item>如何取得在职证明和薪资证明以及休假证明(vacation letter)？</item>
+        <item>人力资源政策以及流程，我该向哪里咨询？</item>
+        <item>入、离职相关的社保、公积金、档案如何办理？</item>
+        <item>平安保险上门服务时间？</item>
+        <item>哪里可以盖公章？</item>
+        <item>我为什么收不到公司的全员信？</item>
+        <item>我为什么没有办法在EPS上提交加班？</item>
+        <item>离职手续如何办理？</item>
+    </string-array>
+    <string-array name="rlzy_content">
+        <item>以下三种方式任选其一即可： 内线：57701-1-1-3， 外线：82147701-1-1-3 邮件：apssc.hr.support@accenture.com 登录https://myrequests.accenture.com/#/home提交需求 注意：以上证明均基于人事系统如实开具，具有中文英文两种版本。请在提交需求时务必写明使用目的，以节省确认时间。</item>
+        <item>内线：57701-1-1-3， 外线：82147701-1-1-3 邮件：apssc.hr.support@accenture.com</item>
+        <item>请联系供应商上海外服：0411-39582896； 办公地点：软件园8号楼1楼</item>
+        <item>详情请关注月末或月初由Greater China Total Rewards Team发出的通知邮件</item>
+        <item>需盖公章请联系ruiyun.zhu 分机电话：33967；座位号：24# 5W136</item>
+        <item>原因可能是： 你是新入职员工 你曾修改过EID 请联系sophia.hou添加权限</item>
+        <item>造成该后果的原因可能是：1你是新入职员工，2你曾修改过EID 请联系sophia.hou添加权限</item>
+        <item>得到CSDL的批准后，相应的PA会联系AEE HR帮助员工处理流程 ※请员工在离职前一周左右，注意查收由AEE HR发送的指南邮件，按照邮件中的说明办理即可。</item>
+        <item>平安保险报销相关的问题。</item>
+    </string-array>
+    <string-array name="xzfw_title">
+        <item>如何领用文具？</item>
+        <item>员工忘带门禁卡了怎么办？</item>
+        <item>门禁卡丢失或者损坏了怎么处理？</item>
+        <item>如何申请照片卡？</item>
+        <item>如何领取（推柜、文件柜）钥匙？钥匙是否可以代领？</item>
+        <item>如何领取报销信封？</item>
+        <item>员工有彩打的需求如何提交和领取？</item>
+        <item>员工可以借用哪些会议室设备？</item>
+        <item>会议室设备如何借用和归还，如果发生丢失或损坏如何处理？</item>
+        <item>员工/访客如何寄存行李/物品？</item>
+    </string-array>
+    <string-array name="xzfw_content">
+        <item>如果您在24号楼，请到24号楼5层文具室领取申请的文具，分机: 35854。 如果您在15或17号楼，请到前台领取文具。 3，6，7号楼的邮件和文具服务没有变化。 BPO文具领用流程不变。 如果您在29号楼，请按照下述方法安装AIOA， 扫描下面的二维码（不要使用微信扫描）， 打开浏览器下载https://www.yundoutech.cn/app/link ※关于AIOA安装使用有任何问题，请联系邮件室，分机：35868。 &#160;</item>
+        <item>员工可以到1楼服务中心办理临时门禁卡, 办理同时需要项目陪同员工的签字确认。 （Renesas项目的同事需要到1楼大堂的保安处办理）</item>
+        <item>员工发送邮件到 cn.facilities@accenture.com提出补卡或更换新卡申请。 收到回复邮件”Your service request is resolved”通知后到1楼服务中心领取新门禁卡。 （100元补卡费用将在员工当月工资中扣除）</item>
+        <item>员工将个人电子照片发送到cn.facilities@accenture.com并提出照片卡申请。 收到回复邮件”Your service request is resolved”通知后到1楼服务中心领取照片卡。</item>
+        <item>员工到1楼服务中心填写相应表格后方可领取。 ※必须本人领取</item>
+        <item>员工到1楼服务中心填写相应表格后方可领取。 ※每人每次最多领取3个，不可代领</item>
+        <item>将WBS code和需要打印的文件发送到cn.facilities@accenture.com 收到回复邮件”Your service request is resolved”通知后到1楼服务中心领取打印文件。</item>
+        <item>VGA线（投影仪用），HDMI线（电视用），激光笔，麦克风，视频转换器。</item>
+        <item>员工到1楼服务中心填写相应表格后可以领取和归还会议室设备。 ※若出现丢失或损坏，员工需要根据借用物品的价格进行赔偿。</item>
+        <item>员工/访客可以到1楼服务中心填写相应表格后进行行李/物品的寄存。</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>行政服务</item>
+        <item>人力资源</item>
+        <item>财务咨询</item>
+        <item>IT技术支持</item>
+    </string-array>
+</resources>

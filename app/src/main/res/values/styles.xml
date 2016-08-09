@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="field_layout">
+        <item name="android:background">@color/readonly_background_color</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="editable_field_layout" parent="field_layout">
+        <item name="android:background">@drawable/layout_selector</item>
+    </style>
+
+    <style name="field_title">
+        <item name="android:color">@color/field_title_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="field_value">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="button_text">
+        <item name="android:color">@color/field_title_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="sub_title">
+        <item name="android:color">@color/field_title_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="app_name">
+        <item name="android:color">@color/field_title_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+</resources>

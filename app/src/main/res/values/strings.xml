@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Robot AI</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="robot_welcome">欢迎使用</string>
+    <string name="action_sign_in">登录系统</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_username">用户名无效</string>
+    <string name="error_invalid_password">密码长度不够</string>
+    <string name="error_incorrect_password">密码无效</string>
+    <string name="error_field_required">必填项</string>
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_actionbar">Accenture AI</string>
+    <string name="tab_title_home">首页</string>
+    <string name="tab_title_category">类别</string>
+    <string name="tab_title_me">我的</string>
+    <string name="tab_title_more">更多</string>
+    <string name="me_photo">头像上传</string>
+    <string name="me_favorite">我的收藏</string>
+    <string name="me_messages">新消息通知</string>
+    <string name="me_private">隐私</string>
+    <string name="me_setting">动画开关</string>
+    <string name="title_item_xzfw">行政服务</string>
+    <string name="title_item_rlzy">人力资源</string>
+    <string name="title_item_cwzx">财务咨询</string>
+    <string name="title_item_itzc">IT技术支持</string>
+    <string name="top10questions">常见问题</string>
+    <string name="question_content">详细回答</string>
+    <string name="rmwd_title">热门问答</string>
+    <string name="zxgx_title">最新更新</string>
+    <string name="ask_title">【问】</string>
+    <string name="about_title">关于小埃</string>
+    <string name="proposal_title">意见及反馈</string>
+    <string name="about_content">小埃为埃森哲大连本地应用，专有平台提供细致贴心的本地通查询服务，支持动画语音提示。轻轻一点，“埃”生活从此开启！</string>
+    <string name="proposal_content">如您有任何建议或疑问，请直接联系我们。邮箱：ROBOT.AI.SUPPORT@accenture.com</string>
+    <string name="message_login_error">登录失败</string>
+    <string name="title_me_favorite">我的收藏</string>
+
+
+    <string name="save">保存</string>
+    <string name="logout">退出</string>
+    <string name="ok">确认</string>
+    <string name="cancel">取消</string>
+    <string name="confirm_exit">再按一次，退出程序</string>
+    <string name="progress_title">处理中...</string>
+    <string name="progress_message">请耐心等待...</string>
+    <string name="no_data">没有数据</string>
+    <string name="validate_not_pass">未通过验证</string>
+    <string name="pref_version">版本</string>
+
+</resources>
