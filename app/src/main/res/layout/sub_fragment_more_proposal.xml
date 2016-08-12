@@ -6,46 +6,53 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/top_more_proposal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/top_more_proposal">
+        android:layout_height="35dp"
+        android:background="@drawable/layout_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/return_icon_more_proposal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/return_icon_more_proposal"
             android:clickable="true"
             android:src="@drawable/icon_return" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/toolbar_more_proposal"
-            android:textStyle="bold" />
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/pager_title_color" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/top_more_proposal">
+        android:layout_below="@+id/top_more_proposal"
+        android:orientation="vertical"
+        android:background="@color/primary">
 
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/imageView"
-            android:src="@drawable/logo_proposal" />
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/logo_proposal"
+            android:layout_marginTop="50dp" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center_horizontal"
             android:text="@string/proposal_content"
-            android:id="@+id/textView"
             android:textAlignment="center"
-            android:gravity="center_horizontal" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/font_color" />
     </LinearLayout>
 
 </RelativeLayout>

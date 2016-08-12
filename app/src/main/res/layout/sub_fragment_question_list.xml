@@ -7,11 +7,12 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="35dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/toolbar_question_list"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/pager_title_color"
+        android:background="@color/primary" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -30,21 +31,25 @@
         android:id="@+id/subtitle_question_list"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView_question_list">
+        android:layout_below="@+id/imageView_question_list"
+        android:background="@color/primary">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/top10questions"
                 android:id="@+id/textView_RMWD_TITLE"
-                android:textColor="#ff39ff42" />
+                android:textColor="@color/home_title_color" />
         </LinearLayout>
 
         <ListView
@@ -52,7 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/subtitle_question_list"
             android:id="@+id/listView_question_list"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/layout_border" />
 
     </LinearLayout>
 

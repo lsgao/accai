@@ -1,5 +1,6 @@
 package com.ruptech.ai.main;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -7,40 +8,93 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ruptech.ai.App;
 import com.ruptech.ai.R;
 import com.ruptech.ai.question.QuestionDetailFragment;
 import com.ruptech.ai.question.QuestionListFragment;
+import com.ruptech.ai.utils.Utils;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
 public class HomeFragment extends Fragment {
     private static final String TAG = HomeFragment.class.getName();
 
+    // TOOLBAR
     @InjectView(R.id.toolbar_home)
     TextView toolbar;
-    @InjectView(R.id.imageView_category_xzfw)
-    ImageView category_xzfw;
-    @InjectView(R.id.imageView_category_rlzy)
-    ImageView category_rlzy;
-    @InjectView(R.id.imageView_category_cwzx)
-    ImageView category_cwzx;
-    @InjectView(R.id.imageView_category_itzc)
-    ImageView category_itzc;
 
+    // 中间部分的分类图标
+    @InjectView(R.id.imageView_category_xzfw)
+    ImageView category_xzfw_image;
+    @InjectView(R.id.textView_category_xzfw)
+    TextView category_xzfw_text;
+
+    @InjectView(R.id.imageView_category_rlzy)
+    ImageView category_rlzy_image;
+    @InjectView(R.id.textView_category_rlzy)
+    TextView category_rlzy_text;
+
+    @InjectView(R.id.imageView_category_cwzx)
+    ImageView category_cwzx_image;
+    @InjectView(R.id.textView_category_cwzx)
+    TextView category_cwzx_text;
+
+    @InjectView(R.id.imageView_category_itzc)
+    ImageView category_itzc_image;
+    @InjectView(R.id.textView_category_itzc)
+    TextView category_itzc_text;
+
+    // 热门问答
+    @InjectView(R.id.layout_RMWD_1)
+    RelativeLayout rmwd_item_1;
+    @InjectView(R.id.imageView_RMWD_LOGO_1)
+    ImageView rmwd_logo_1;
     @InjectView(R.id.textView_RMWD_1)
     TextView rmwd_1;
+    @InjectView(R.id.imageView_RMWD_NEXT_1)
+    ImageView rmwd_next_1;
+
+    @InjectView(R.id.layout_RMWD_2)
+    RelativeLayout rmwd_item_2;
+    @InjectView(R.id.imageView_RMWD_LOGO_2)
+    ImageView rmwd_logo_2;
     @InjectView(R.id.textView_RMWD_2)
     TextView rmwd_2;
+    @InjectView(R.id.imageView_RMWD_NEXT_2)
+    ImageView rmwd_next_2;
+
+    @InjectView(R.id.layout_RMWD_3)
+    RelativeLayout rmwd_item_3;
+    @InjectView(R.id.imageView_RMWD_LOGO_3)
+    ImageView rmwd_logo_3;
+    @InjectView(R.id.textView_RMWD_3)
+    TextView rmwd_3;
+    @InjectView(R.id.imageView_RMWD_NEXT_3)
+    ImageView rmwd_next_3;
+
+    // 最新更新
+    @InjectView(R.id.layout_ZXGX_1)
+    RelativeLayout zxgx_item_1;
+    @InjectView(R.id.imageView_ZXGX_LOGO_1)
+    ImageView zxgx_logo_1;
     @InjectView(R.id.textView_ZXGX_1)
     TextView zxgx_1;
+    @InjectView(R.id.imageView_ZXGX_NEXT_1)
+    ImageView zxgx_next_1;
+
+    @InjectView(R.id.layout_ZXGX_2)
+    RelativeLayout zxgx_item_2;
+    @InjectView(R.id.imageView_ZXGX_LOGO_2)
+    ImageView zxgx_logo_2;
     @InjectView(R.id.textView_ZXGX_2)
     TextView zxgx_2;
+    @InjectView(R.id.imageView_ZXGX_NEXT_2)
+    ImageView zxgx_next_2;
 
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
@@ -60,35 +114,65 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.inject(this, rootView);
-        String title_home = getString(R.string.title_activity_actionbar) + " - " + App.readUser().getUsername();
+        //String title_home = getString(R.string.title_activity_actionbar) + " - " + App.readUser().getUsername();
+        String title_home = ">" + "\n" + "accenture";
         toolbar.setText(title_home);
-        rmwd_1.setText(getString(R.string.ask_title) + " " + MainActivity.xzfw_titles[0]);
-        rmwd_2.setText(getString(R.string.ask_title) + " " + MainActivity.xzfw_titles[1]);
-        zxgx_1.setText(getString(R.string.ask_title) + " " + MainActivity.rlzy_titles[0]);
-        zxgx_2.setText(getString(R.string.ask_title) + " " + MainActivity.rlzy_titles[1]);
+        rmwd_1.setText(Utils.getSubString(MainActivity.xzfw_titles[0], 13, "..."));
+        rmwd_2.setText(Utils.getSubString(MainActivity.rlzy_titles[0], 13, "..."));
+        rmwd_3.setText(Utils.getSubString(MainActivity.itzc_titles[0], 13, "..."));
+        zxgx_1.setText(Utils.getSubString(MainActivity.xzfw_titles[1], 13, "..."));
+        zxgx_2.setText(Utils.getSubString(MainActivity.rlzy_titles[1], 13, "..."));
 
-        category_xzfw.setOnClickListener(new View.OnClickListener() {
+        category_xzfw_image.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 moveToQuestionListFragment(MainActivity.TYPE_XZFW);
             }
         });
-        category_rlzy.setOnClickListener(new View.OnClickListener() {
+        category_xzfw_text.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionListFragment(MainActivity.TYPE_XZFW);
+            }
+        });
+        category_rlzy_image.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 moveToQuestionListFragment(MainActivity.TYPE_RLZY);
             }
         });
-        category_cwzx.setOnClickListener(new View.OnClickListener() {
+        category_rlzy_text.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionListFragment(MainActivity.TYPE_RLZY);
+            }
+        });
+        category_cwzx_image.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 moveToQuestionListFragment(MainActivity.TYPE_CWZX);
             }
         });
-        category_itzc.setOnClickListener(new View.OnClickListener() {
+        category_cwzx_text.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionListFragment(MainActivity.TYPE_CWZX);
+            }
+        });
+        category_itzc_image.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionListFragment(MainActivity.TYPE_ITZC);
+            }
+        });
+        category_itzc_text.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -96,6 +180,20 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        rmwd_item_1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 0);
+            }
+        });
+        rmwd_logo_1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 0);
+            }
+        });
         rmwd_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -103,7 +201,80 @@ public class HomeFragment extends Fragment {
                 moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 0);
             }
         });
+        rmwd_next_1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 0);
+            }
+        });
+
+        rmwd_item_2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+            }
+        });
+        rmwd_logo_2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+            }
+        });
         rmwd_2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+            }
+        });
+        rmwd_next_2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+            }
+        });
+
+        rmwd_item_3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 0);
+            }
+        });
+        rmwd_logo_3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 0);
+            }
+        });
+        rmwd_3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 0);
+            }
+        });
+        rmwd_next_3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 0);
+            }
+        });
+
+        zxgx_item_1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 1);
+            }
+        });
+        zxgx_logo_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -114,10 +285,39 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 1);
+            }
+        });
+        zxgx_next_1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 1);
+            }
+        });
+
+        zxgx_item_2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 1);
+            }
+        });
+        zxgx_logo_2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 1);
             }
         });
         zxgx_2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 1);
+            }
+        });
+        zxgx_next_2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -128,7 +328,7 @@ public class HomeFragment extends Fragment {
     }
 
     public void moveToQuestionDetailFragment(String type, int index) {
-        ((MainActivity)getActivity()).pager.setCurrentItem(1);
+        ((MainActivity) getActivity()).pager.setCurrentItem(1);
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 
         Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
@@ -138,7 +338,7 @@ public class HomeFragment extends Fragment {
     }
 
     public void moveToQuestionListFragment(String type) {
-        ((MainActivity)getActivity()).pager.setCurrentItem(1);
+        ((MainActivity) getActivity()).pager.setCurrentItem(1);
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 
         Fragment target = QuestionListFragment.newInstance(type);

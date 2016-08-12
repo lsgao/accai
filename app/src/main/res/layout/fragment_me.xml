@@ -8,5 +8,6 @@
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/me_main_fragment" />
+        android:id="@+id/me_main_fragment"
+        android:background="@color/primary" />
 </RelativeLayout>

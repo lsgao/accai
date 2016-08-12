@@ -3,6 +3,8 @@ package com.ruptech.ai.main;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -43,8 +45,8 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     public static final String EXTRA_INDEX = "EXTRA_INDEX";
     public static final String EXTRA_KIND = "EXTRA_KIND";
 
-    public static final String EXTRA_WORKERS = "EXTRA_WORKER";
-    public static final String EXTRA_EDITABLE = "EXTRA_EDITABLE";
+    public static final int TAKE_PHOTO = 1;
+
     public static MainActivity instance = null;
     @InjectView(R.id.tabHost)
     MaterialTabHost tabHost;
@@ -126,7 +128,6 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
             public void onPageSelected(int position) {
                 // when user do a swipe the selected tab change
                 tabHost.setSelectedNavigationItem(position);
-
             }
         });
         setTabHosts();
@@ -136,6 +137,19 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == TAKE_PHOTO) {
+            try {
+                //
+            } catch (Exception e) {
+            }
+
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
@@ -193,23 +207,47 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     protected void setTabHosts() {
         MaterialTab homeTab = new MaterialTab(this, true);
         homeTab.setIcon(getResources().getDrawable(R.drawable.tab_home));
+//        homeTab.setText(getString(R.string.tab_title_home));
         homeTab.setTabListener(this);
         tabHost.addTab(homeTab);
 
+//        MaterialTab homeTab_text = new MaterialTab(this, false);
+//        homeTab_text.setText(getString(R.string.tab_title_home));
+//        homeTab_text.setTabListener(this);
+//        tabHost_text.addTab(homeTab_text);
+
         MaterialTab categoryTab = new MaterialTab(this, true);
         categoryTab.setIcon(getResources().getDrawable(R.drawable.tab_category));
+//        categoryTab.setText(getString(R.string.tab_title_category));
         categoryTab.setTabListener(this);
         tabHost.addTab(categoryTab);
 
+//        MaterialTab categoryTab_text = new MaterialTab(this, false);
+//        categoryTab_text.setText(getString(R.string.tab_title_category));
+//        categoryTab_text.setTabListener(this);
+//        tabHost_text.addTab(categoryTab_text);
+
         MaterialTab meTab = new MaterialTab(this, true);
         meTab.setIcon(getResources().getDrawable(R.drawable.tab_me));
+//        meTab.setText(getString(R.string.tab_title_me));
         meTab.setTabListener(this);
         tabHost.addTab(meTab);
 
+//        MaterialTab meTab_text = new MaterialTab(this, false);
+//        meTab_text.setText(getString(R.string.tab_title_me));
+//        meTab_text.setTabListener(this);
+//        tabHost_text.addTab(meTab_text);
+
         MaterialTab moreTab = new MaterialTab(this, true);
         moreTab.setIcon(getResources().getDrawable(R.drawable.tab_more));
+//        moreTab.setText(getString(R.string.tab_title_more));
         moreTab.setTabListener(this);
         tabHost.addTab(moreTab);
+
+//        MaterialTab moreTab_text = new MaterialTab(this, false);
+//        moreTab_text.setText(getString(R.string.tab_title_more));
+//        moreTab_text.setTabListener(this);
+//        tabHost_text.addTab(moreTab_text);
     }
 
     private void popupCategoriesMenu() {
@@ -219,7 +257,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         {
             public void onClick(DialogInterface arg0, int arg1)
             {
-                String type = MainActivity.TYPE_XZFW;
+                String type;
                 switch (arg1) {
                     case 0:
                         type = MainActivity.TYPE_XZFW;

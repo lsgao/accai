@@ -4,51 +4,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="35dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/tab_title_more"
         android:id="@+id/toolbar_more_first"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/pager_title_color"
+        android:background="@drawable/layout_border" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/toolbar_more_first"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:background="@color/primary">
 
         <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:id="@+id/imageView_more_first_about"
-            android:src="@drawable/logo_about" />
+            android:src="@drawable/ic_launcher"
+            android:layout_marginTop="50dp" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/about_title"
             android:id="@+id/textView_more_first_about"
             android:textAlignment="center"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/font_color" />
 
         <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:id="@+id/imageView_more_first_proposal"
-            android:src="@drawable/logo_proposal" />
+            android:src="@drawable/logo_proposal"
+            android:layout_marginTop="50dp" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/proposal_title"
             android:id="@+id/textView_more_first_proposal"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/font_color" />
     </LinearLayout>
 
 </RelativeLayout>

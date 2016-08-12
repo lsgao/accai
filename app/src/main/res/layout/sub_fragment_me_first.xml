@@ -2,46 +2,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/primary">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/tab_title_me"
-        android:id="@+id/toolbar_me"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+    <RelativeLayout
+        android:id="@+id/top_me_first"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/layout_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/toolbar_me"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/pager_title_color"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:id="@+id/logout_icon_me_first"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/logout"
+            android:textColor="@color/pager_title_color"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp" />
+    </RelativeLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_me"
+        android:layout_below="@+id/top_me_first"
         android:background="@drawable/people_bg"
-        android:id="@+id/photo_bg">
+        android:id="@+id/photo_bg"
+        android:gravity="center_vertical">
 
-        <ImageButton
+        <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/imageButton"
-            android:background="@drawable/default_photo" />
+            android:id="@+id/imageView_me_first_photo"
+            android:src="@drawable/default_photo"
+            android:layout_marginLeft="20dp" />
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView_me_name" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView_me_name"
+                android:gravity="center_vertical" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Accenture Operations"
                 android:id="@+id/textView2" />
         </LinearLayout>
@@ -52,76 +77,94 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/photo_bg">
+        android:layout_below="@+id/photo_bg"
+        android:background="@color/primary"
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:clickable="true">
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/layout_border"
+            android:id="@+id/item_me_first_photo">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView_profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView_me_first_photo_logo"
                 android:contentDescription="@string/me_photo"
                 android:src="@drawable/me_profile"
-                android:clickable="true" />
+                android:clickable="true"
+                android:layout_margin="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/me_photo"
-                android:id="@+id/textView_profile"
-                android:clickable="true" />
+                android:id="@+id/textView_me_first_photo_title"
+                android:clickable="true"
+                android:textColor="@color/font_color"
+                android:layout_marginLeft="5dp"/>
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:clickable="true">
+            android:clickable="true"
+            android:background="@drawable/layout_border"
+            android:gravity="center_vertical"
+            android:id="@+id/item_me_first_favorite">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView_favorite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView_me_first_favorite_logo"
                 android:contentDescription="@string/me_favorite"
                 android:src="@drawable/me_favorite"
-                android:clickable="true" />
+                android:clickable="true"
+                android:layout_margin="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/me_favorite"
-                android:id="@+id/textView_favorite"
-                android:clickable="true" />
+                android:id="@+id/textView_me_first_favorite_title"
+                android:clickable="true"
+                android:textColor="@color/font_color" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:clickable="true">
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:background="@drawable/layout_border"
+            android:gravity="center_vertical"
+            android:id="@+id/item_me_first_flash">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView_setting"
-                android:contentDescription="@string/me_setting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView_me_first_flash_logo"
+                android:contentDescription="@string/me_flash"
                 android:src="@drawable/me_setting"
-                android:clickable="true" />
+                android:clickable="true"
+                android:layout_margin="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/me_setting"
-                android:id="@+id/textView_setting"
-                android:clickable="true" />
+                android:text="@string/me_flash"
+                android:id="@+id/textView_me_first_flash_title"
+                android:clickable="true"
+                android:textColor="@color/font_color" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

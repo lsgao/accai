@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.ruptech.ai.R;
 import com.ruptech.ai.main.MainActivity;
+import com.ruptech.ai.utils.Utils;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -101,7 +102,7 @@ public class QuestionListFragment extends Fragment {
 
         for (int i = 0; i < titles.length; i++) {
             Map<String, Object> temp = new HashMap<String, Object>();
-            temp.put("TITLE", titles[i]);
+            temp.put("TITLE", Utils.getSubString(titles[i], 17, "..."));
             result.add(temp);
         }
 

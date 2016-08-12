@@ -9,18 +9,18 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tabHost" />
+        android:layout_above="@+id/tabHost"
+        android:background="@color/primary" />
 
     <it.neokree.materialtabs.MaterialTabHost
         android:id="@+id/tabHost"
         android:layout_width="fill_parent"
-        android:layout_height="48dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         app:hasIcons="true"
         app:accentColor="@color/tab_accent_color"
         app:primaryColor="@color/tab_primary_color"
         app:iconColor="@color/tab_accent_color"
         app:textColor="@color/tab_accent_color" />
-
 
 </RelativeLayout>

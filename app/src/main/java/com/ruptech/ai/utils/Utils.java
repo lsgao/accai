@@ -94,4 +94,11 @@ public class Utils {
         }
         return b;
     }
+
+    public static String getSubString(String str, int length, String append) {
+        if(str.length() > length) {
+            str = str.substring(0, length) + append;
+        }
+        return str;
+    }
 }

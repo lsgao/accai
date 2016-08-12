@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="maintain_back_color">#f0f0f0</color>
-    <color name="check_back_color">#ffffe698</color>
+
     <color name="readonly_background_color">#f0f0f0</color>
     <color name="field_title_color">#000000</color>
     <color name="editor_normal_color">#e0e0e0</color>
@@ -11,8 +10,11 @@
     <color name="ripple">#ff80ab</color>
     <color name="toolbar_background_color">#ffffff</color>
     <color name="tab_primary_color">#ffffff</color>
-    <color name="tab_accent_color">#98fae7</color>
+    <color name="tab_accent_color">#99cccc</color>
     <color name="info_text_color">#333333</color>
+    <color name="pager_title_color">#cccccc</color>
+    <color name="home_title_color">#ff9933</color>
+    <color name="font_color">#aaaaaa</color>
 
     <color name="item_status_color_doing">#ffc400</color>
     <color name="item_status_color_error">#9dff3f</color>

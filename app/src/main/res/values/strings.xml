@@ -23,13 +23,15 @@
     <string name="me_favorite">我的收藏</string>
     <string name="me_messages">新消息通知</string>
     <string name="me_private">隐私</string>
-    <string name="me_setting">动画开关</string>
+    <string name="me_flash">动画开关</string>
     <string name="title_item_xzfw">行政服务</string>
     <string name="title_item_rlzy">人力资源</string>
     <string name="title_item_cwzx">财务咨询</string>
     <string name="title_item_itzc">IT技术支持</string>
-    <string name="top10questions">常见问题</string>
+    <string name="top10questions">TOP10 常见问题</string>
     <string name="question_content">详细回答</string>
+    <string name="button_praise">有用</string>
+    <string name="button_favorite">收藏</string>
     <string name="rmwd_title">热门问答</string>
     <string name="zxgx_title">最新更新</string>
     <string name="ask_title">【问】</string>
@@ -37,10 +39,11 @@
     <string name="proposal_title">意见及反馈</string>
     <string name="about_content">小埃为埃森哲大连本地应用，专有平台提供细致贴心的本地通查询服务，支持动画语音提示。轻轻一点，“埃”生活从此开启！</string>
     <string name="proposal_content">如您有任何建议或疑问，请直接联系我们。邮箱：ROBOT.AI.SUPPORT@accenture.com</string>
+    <string name="message_can_not_find_sdcard">未找到存储卡，无法存储照片！</string>
     <string name="message_login_error">登录失败</string>
     <string name="title_me_favorite">我的收藏</string>
-
-
+    <string name="button_take_a_photo">拍照</string>
+    <string name="button_select_a_photo">从相册选择</string>
     <string name="save">保存</string>
     <string name="logout">退出</string>
     <string name="ok">确认</string>
@@ -51,5 +54,8 @@
     <string name="no_data">没有数据</string>
     <string name="validate_not_pass">未通过验证</string>
     <string name="pref_version">版本</string>
+    <string name="title_activity_upload_photo">UploadPhotoActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

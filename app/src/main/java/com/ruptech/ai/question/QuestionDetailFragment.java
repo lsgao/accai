@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.ruptech.ai.R;
 import com.ruptech.ai.main.MainActivity;
+import com.ruptech.ai.utils.Utils;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -58,22 +59,22 @@ public class QuestionDetailFragment extends Fragment {
         ButterKnife.inject(this, rootView);
 
         if (MainActivity.TYPE_XZFW.equals(type)) {
-            String title = getString(R.string.title_item_xzfw);
+            String title = Utils.getSubString(MainActivity.xzfw_titles[index], 15, "...");
             toolbar.setText(title);
             String[] contents = MainActivity.xzfw_contents;
             content.setText(contents[index]);
         } else if (MainActivity.TYPE_RLZY.equals(type)) {
-            String title = getString(R.string.title_item_rlzy);
+            String title = Utils.getSubString(MainActivity.rlzy_titles[index], 15, "...");
             toolbar.setText(title);
             String[] contents = MainActivity.rlzy_contents;
             content.setText(contents[index]);
         } else if (MainActivity.TYPE_CWZX.equals(type)) {
-            String title = getString(R.string.title_item_cwzx);
+            String title = Utils.getSubString(MainActivity.cwzx_titles[index], 15, "...");
             toolbar.setText(title);
             String[] contents = MainActivity.cwzx_contents;
             content.setText(contents[index]);
         } else if (MainActivity.TYPE_ITZC.equals(type)) {
-            String title = getString(R.string.title_item_itzc);
+            String title = Utils.getSubString(MainActivity.itzc_titles[index], 15, "...");
             toolbar.setText(title);
             String[] contents = MainActivity.itzc_contents;
             content.setText(contents[index]);

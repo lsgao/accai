@@ -6,32 +6,35 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
+    android:id="@+id/top_me_favorite"
+    android:layout_width="fill_parent"
+    android:layout_height="35dp"
+    android:background="@drawable/layout_border"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/top_me_favorite">
+        android:id="@+id/return_icon_me_favorite"
+        android:clickable="true"
+        android:src="@drawable/icon_return" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/return_icon_me_favorite"
-            android:clickable="true"
-            android:src="@drawable/icon_return" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/toolbar_me_favorite"
-            android:textStyle="bold"
-            android:text="@string/title_me_favorite"
-            android:gravity="center_horizontal" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/toolbar_me_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/title_me_favorite"
+        android:textColor="@color/pager_title_color"/>
+</LinearLayout>
 
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/top_me_favorite"
-        android:id="@+id/listView" />
+        android:id="@+id/listView"
+        android:background="@color/primary" />
 
 </RelativeLayout>
