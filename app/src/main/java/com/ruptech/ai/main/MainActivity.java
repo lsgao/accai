@@ -4,6 +4,8 @@ import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -22,6 +24,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ruptech.ai.R;
+import com.ruptech.ai.me.MeFirstFragment;
+import com.ruptech.ai.me.UploadPhotoActivity;
 import com.ruptech.ai.question.QuestionListFragment;
 import com.ruptech.ai.view.PagerItem;
 import com.ruptech.ai.view.ViewPagerAdapter;
@@ -133,6 +137,8 @@ public class MainActivity extends ActionBarActivity {
 
         category_menu = getResources().getStringArray(R.array.categories);
 
+        InitWidth();
+
         // init view pager
         initViewPager();
 
@@ -149,7 +155,13 @@ public class MainActivity extends ActionBarActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == TAKE_PHOTO) {
             try {
-                //
+                ImageView photo = getUsePhoto();
+                if (null != photo) {
+                    Bitmap bm = BitmapFactory.decodeFile(UploadPhotoActivity.SAVE_REAL_PATH + "/" + UploadPhotoActivity.PIC_NAME);
+                    if (null != bm) {
+                        photo.setImageBitmap(bm);
+                    }
+                }
             } catch (Exception e) {
             }
 
@@ -193,7 +205,7 @@ public class MainActivity extends ActionBarActivity {
                 getString(R.string.tab_title_category) // Title
         ) {
             public Fragment createFragment() {
-                return QuestionFragment.newInstance(MainActivity.TYPE_CWZX,"0",QuestionFragment.KIND_LIST);
+                return QuestionFragment.newInstance(MainActivity.TYPE_CWZX, "0", QuestionFragment.KIND_LIST);
             }
         });
 
@@ -226,10 +238,8 @@ public class MainActivity extends ActionBarActivity {
     private void popupCategoriesMenu() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
-        builder.setItems(MainActivity.category_menu, new DialogInterface.OnClickListener()
-        {
-            public void onClick(DialogInterface arg0, int arg1)
-            {
+        builder.setItems(MainActivity.category_menu, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
                 String type;
                 switch (arg1) {
                     case 0:
@@ -267,10 +277,11 @@ public class MainActivity extends ActionBarActivity {
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
     }
+
     /**
      * 自定义监听类
-     * @author Administrator
      *
+     * @author Administrator
      */
     public class TabOnClickListener implements View.OnClickListener {
         private int index = 0;
@@ -281,7 +292,7 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void onClick(View v) {
-            if(1 == index) {
+            if (1 == index) {
                 popupCategoriesMenu();
             } else {
                 //设置ViewPager的当前view
@@ -292,8 +303,8 @@ public class MainActivity extends ActionBarActivity {
 
     /**
      * 页面滑动监听
-     * @author Administrator
      *
+     * @author Administrator
      */
     public class PagerOnPageChangeListener implements ViewPager.OnPageChangeListener {
 
@@ -392,8 +403,21 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    public ImageView getUsePhoto() {
+        if (2 == currIndex) {
+            Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.me_main_fragment);
+            if (currentFragment instanceof MeFirstFragment) {
+                return ((MeFirstFragment) currentFragment).getUserPhoto();
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+    }
+
     /**
-     *  初始化底栏，获取相应宽度信息
+     * 初始化底栏，获取相应宽度信息
      */
     private void InitWidth() {
 

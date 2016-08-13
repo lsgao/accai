@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.ruptech.ai.R;
 import com.ruptech.ai.me.MeFavoriteFragment;
@@ -49,9 +50,9 @@ public class MeFragment extends Fragment {
         kind = getArguments().getString(MainActivity.EXTRA_KIND);
 
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        if(MeFragment.KIND_FIRST.equals(kind)) {
+        if (MeFragment.KIND_FIRST.equals(kind)) {
             ft.replace(R.id.me_main_fragment, MeFirstFragment.newInstance());
-        } else if(MeFragment.KIND_FAVORITE.equals(kind)) {
+        } else if (MeFragment.KIND_FAVORITE.equals(kind)) {
             ft.replace(R.id.me_main_fragment, MeFavoriteFragment.newInstance());
         } else {
             ft.replace(R.id.me_main_fragment, MeFirstFragment.newInstance());

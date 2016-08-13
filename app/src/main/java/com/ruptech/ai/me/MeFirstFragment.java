@@ -74,7 +74,7 @@ public class MeFirstFragment extends Fragment {
         });
 
         Bitmap bm = BitmapFactory.decodeFile(UploadPhotoActivity.SAVE_REAL_PATH + "/" + UploadPhotoActivity.PIC_NAME);
-        if(null != bm) {
+        if (null != bm) {
             user_photo.setImageBitmap(bm);
         }
         user_name.setText(App.readUser().getUsername());
@@ -145,6 +145,10 @@ public class MeFirstFragment extends Fragment {
         App.logout();
         Intent intent = new Intent(getActivity(), LoginActivity.class);
         startActivity(intent);
+    }
+
+    public ImageView getUserPhoto() {
+        return this.user_photo;
     }
 }
 
