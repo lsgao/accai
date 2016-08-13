@@ -313,7 +313,7 @@ public class MainActivity extends ActionBarActivity {
                         tab_me_title.setTextColor(getResources().getColor(R.color.font_color));
                     } else if (currIndex == 3) {
                         animation = new TranslateAnimation(position_three, 0, 0, 0);
-                        tab_more_icon.setImageResource(R.drawable.tab_me);
+                        tab_more_icon.setImageResource(R.drawable.tab_more);
                         tab_more_title.setTextColor(getResources().getColor(R.color.font_color));
                     }
                     tab_home_icon.setImageResource(R.drawable.tab_home_selected);
@@ -330,7 +330,7 @@ public class MainActivity extends ActionBarActivity {
                         tab_me_title.setTextColor(getResources().getColor(R.color.font_color));
                     } else if (currIndex == 3) {
                         animation = new TranslateAnimation(position_three, position_one, 0, 0);
-                        tab_more_icon.setImageResource(R.drawable.tab_me);
+                        tab_more_icon.setImageResource(R.drawable.tab_more);
                         tab_more_title.setTextColor(getResources().getColor(R.color.font_color));
                     }
                     tab_category_icon.setImageResource(R.drawable.tab_category_selected);
@@ -347,7 +347,7 @@ public class MainActivity extends ActionBarActivity {
                         tab_category_title.setTextColor(getResources().getColor(R.color.font_color));
                     } else if (currIndex == 3) {
                         animation = new TranslateAnimation(position_three, position_two, 0, 0);
-                        tab_more_icon.setImageResource(R.drawable.tab_me);
+                        tab_more_icon.setImageResource(R.drawable.tab_more);
                         tab_more_title.setTextColor(getResources().getColor(R.color.font_color));
                     }
                     tab_me_icon.setImageResource(R.drawable.tab_me_selected);
@@ -367,7 +367,7 @@ public class MainActivity extends ActionBarActivity {
                         tab_me_icon.setImageResource(R.drawable.tab_me);
                         tab_me_title.setTextColor(getResources().getColor(R.color.font_color));
                     }
-                    tab_more_icon.setImageResource(R.drawable.tab_me_selected);
+                    tab_more_icon.setImageResource(R.drawable.tab_more_selected);
                     tab_more_title.setTextColor(getResources().getColor(R.color.editor_pressed_color));
                     break;
             }
