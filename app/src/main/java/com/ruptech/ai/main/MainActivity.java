@@ -4,21 +4,24 @@ import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Gravity;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ruptech.ai.R;
-import com.ruptech.ai.me.MeFirstFragment;
-import com.ruptech.ai.question.QuestionDetailFragment;
 import com.ruptech.ai.question.QuestionListFragment;
 import com.ruptech.ai.view.PagerItem;
 import com.ruptech.ai.view.ViewPagerAdapter;
@@ -28,11 +31,8 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import it.neokree.materialtabs.MaterialTab;
-import it.neokree.materialtabs.MaterialTabHost;
-import it.neokree.materialtabs.MaterialTabListener;
 
-public class MainActivity extends ActionBarActivity implements MaterialTabListener {
+public class MainActivity extends ActionBarActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
@@ -48,10 +48,40 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     public static final int TAKE_PHOTO = 1;
 
     public static MainActivity instance = null;
-    @InjectView(R.id.tabHost)
-    MaterialTabHost tabHost;
+
     @InjectView(R.id.pager)
     ViewPager pager;
+
+    @InjectView(R.id.tab_home)
+    LinearLayout tab_home;
+    @InjectView(R.id.tab_home_title)
+    TextView tab_home_title;
+    @InjectView(R.id.tab_home_icon)
+    ImageView tab_home_icon;
+
+    @InjectView(R.id.tab_category)
+    LinearLayout tab_category;
+    @InjectView(R.id.tab_category_title)
+    TextView tab_category_title;
+    @InjectView(R.id.tab_category_icon)
+    ImageView tab_category_icon;
+
+    @InjectView(R.id.tab_me)
+    LinearLayout tab_me;
+    @InjectView(R.id.tab_me_title)
+    TextView tab_me_title;
+    @InjectView(R.id.tab_me_icon)
+    ImageView tab_me_icon;
+
+    @InjectView(R.id.tab_more)
+    LinearLayout tab_more;
+    @InjectView(R.id.tab_more_title)
+    TextView tab_more_title;
+    @InjectView(R.id.tab_more_icon)
+    ImageView tab_more_icon;
+
+    @InjectView(R.id.tab_bottom_line)
+    ImageView tabBottomLine;
 
     public static String[] xzfw_titles = {};
     public static String[] xzfw_contents = {};
@@ -86,23 +116,6 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     }
 
     @Override
-    public void onTabSelected(MaterialTab tab) {
-        if(1 == tab.getPosition()) {
-            popupCategoriesMenu();
-        } else {
-            pager.setCurrentItem(tab.getPosition());
-        }
-    }
-
-    @Override
-    public void onTabReselected(MaterialTab tab) {
-    }
-
-    @Override
-    public void onTabUnselected(MaterialTab tab) {
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -121,16 +134,9 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         category_menu = getResources().getStringArray(R.array.categories);
 
         // init view pager
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), setupTabs());
-        pager.setAdapter(adapter);
-        pager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-            @Override
-            public void onPageSelected(int position) {
-                // when user do a swipe the selected tab change
-                tabHost.setSelectedNavigationItem(position);
-            }
-        });
-        setTabHosts();
+        initViewPager();
+
+        initTabHost();
     }
 
     @Override
@@ -162,7 +168,13 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         return super.onOptionsItemSelected(item);
     }
 
-    protected List<PagerItem> setupTabs() {
+    protected void initViewPager() {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), setupPagerItems());
+        pager.setAdapter(adapter);
+        pager.setOnPageChangeListener(new PagerOnPageChangeListener());
+    }
+
+    private List<PagerItem> setupPagerItems() {
         List<PagerItem> mTabs = new ArrayList<PagerItem>();
 
         /**
@@ -204,50 +216,11 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-    protected void setTabHosts() {
-        MaterialTab homeTab = new MaterialTab(this, true);
-        homeTab.setIcon(getResources().getDrawable(R.drawable.tab_home));
-//        homeTab.setText(getString(R.string.tab_title_home));
-        homeTab.setTabListener(this);
-        tabHost.addTab(homeTab);
-
-//        MaterialTab homeTab_text = new MaterialTab(this, false);
-//        homeTab_text.setText(getString(R.string.tab_title_home));
-//        homeTab_text.setTabListener(this);
-//        tabHost_text.addTab(homeTab_text);
-
-        MaterialTab categoryTab = new MaterialTab(this, true);
-        categoryTab.setIcon(getResources().getDrawable(R.drawable.tab_category));
-//        categoryTab.setText(getString(R.string.tab_title_category));
-        categoryTab.setTabListener(this);
-        tabHost.addTab(categoryTab);
-
-//        MaterialTab categoryTab_text = new MaterialTab(this, false);
-//        categoryTab_text.setText(getString(R.string.tab_title_category));
-//        categoryTab_text.setTabListener(this);
-//        tabHost_text.addTab(categoryTab_text);
-
-        MaterialTab meTab = new MaterialTab(this, true);
-        meTab.setIcon(getResources().getDrawable(R.drawable.tab_me));
-//        meTab.setText(getString(R.string.tab_title_me));
-        meTab.setTabListener(this);
-        tabHost.addTab(meTab);
-
-//        MaterialTab meTab_text = new MaterialTab(this, false);
-//        meTab_text.setText(getString(R.string.tab_title_me));
-//        meTab_text.setTabListener(this);
-//        tabHost_text.addTab(meTab_text);
-
-        MaterialTab moreTab = new MaterialTab(this, true);
-        moreTab.setIcon(getResources().getDrawable(R.drawable.tab_more));
-//        moreTab.setText(getString(R.string.tab_title_more));
-        moreTab.setTabListener(this);
-        tabHost.addTab(moreTab);
-
-//        MaterialTab moreTab_text = new MaterialTab(this, false);
-//        moreTab_text.setText(getString(R.string.tab_title_more));
-//        moreTab_text.setTabListener(this);
-//        tabHost_text.addTab(moreTab_text);
+    protected void initTabHost() {
+        tab_home.setOnClickListener(new TabOnClickListener(0));
+        tab_category.setOnClickListener(new TabOnClickListener(1));
+        tab_me.setOnClickListener(new TabOnClickListener(2));
+        tab_more.setOnClickListener(new TabOnClickListener(3));
     }
 
     private void popupCategoriesMenu() {
@@ -294,5 +267,156 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
     }
+    /**
+     * 自定义监听类
+     * @author Administrator
+     *
+     */
+    public class TabOnClickListener implements View.OnClickListener {
+        private int index = 0;
 
+        public TabOnClickListener(int i) {
+            index = i;
+        }
+
+        @Override
+        public void onClick(View v) {
+            if(1 == index) {
+                popupCategoriesMenu();
+            } else {
+                //设置ViewPager的当前view
+                pager.setCurrentItem(index);
+            }
+        }
+    }
+
+    /**
+     * 页面滑动监听
+     * @author Administrator
+     *
+     */
+    public class PagerOnPageChangeListener implements ViewPager.OnPageChangeListener {
+
+        @Override
+        public void onPageSelected(int index) {
+            //动画
+            Animation animation = null;
+            switch (index) {
+                case 0:
+                    if (currIndex == 1) {
+                        animation = new TranslateAnimation(position_one, 0, 0, 0);
+                        tab_category_icon.setImageResource(R.drawable.tab_category);
+                        tab_category_title.setTextColor(getResources().getColor(R.color.font_color));
+                    } else if (currIndex == 2) {
+                        animation = new TranslateAnimation(position_two, 0, 0, 0);
+                        tab_me_icon.setImageResource(R.drawable.tab_me);
+                        tab_me_title.setTextColor(getResources().getColor(R.color.font_color));
+                    } else if (currIndex == 3) {
+                        animation = new TranslateAnimation(position_three, 0, 0, 0);
+                        tab_more_icon.setImageResource(R.drawable.tab_me);
+                        tab_more_title.setTextColor(getResources().getColor(R.color.font_color));
+                    }
+                    tab_home_icon.setImageResource(R.drawable.tab_home_selected);
+                    tab_home_title.setTextColor(getResources().getColor(R.color.editor_pressed_color));
+                    break;
+                case 1:
+                    if (currIndex == 0) {
+                        animation = new TranslateAnimation(0, position_one, 0, 0);
+                        tab_home_icon.setImageResource(R.drawable.tab_home);
+                        tab_home_title.setTextColor(getResources().getColor(R.color.font_color));
+                    } else if (currIndex == 2) {
+                        animation = new TranslateAnimation(position_two, position_one, 0, 0);
+                        tab_me_icon.setImageResource(R.drawable.tab_me);
+                        tab_me_title.setTextColor(getResources().getColor(R.color.font_color));
+                    } else if (currIndex == 3) {
+                        animation = new TranslateAnimation(position_three, position_one, 0, 0);
+                        tab_more_icon.setImageResource(R.drawable.tab_me);
+                        tab_more_title.setTextColor(getResources().getColor(R.color.font_color));
+                    }
+                    tab_category_icon.setImageResource(R.drawable.tab_category_selected);
+                    tab_category_title.setTextColor(getResources().getColor(R.color.editor_pressed_color));
+                    break;
+                case 2:
+                    if (currIndex == 0) {
+                        animation = new TranslateAnimation(0, position_two, 0, 0);
+                        tab_home_icon.setImageResource(R.drawable.tab_home);
+                        tab_home_title.setTextColor(getResources().getColor(R.color.font_color));
+                    } else if (currIndex == 1) {
+                        animation = new TranslateAnimation(position_one, position_two, 0, 0);
+                        tab_category_icon.setImageResource(R.drawable.tab_category);
+                        tab_category_title.setTextColor(getResources().getColor(R.color.font_color));
+                    } else if (currIndex == 3) {
+                        animation = new TranslateAnimation(position_three, position_two, 0, 0);
+                        tab_more_icon.setImageResource(R.drawable.tab_me);
+                        tab_more_title.setTextColor(getResources().getColor(R.color.font_color));
+                    }
+                    tab_me_icon.setImageResource(R.drawable.tab_me_selected);
+                    tab_me_title.setTextColor(getResources().getColor(R.color.editor_pressed_color));
+                    break;
+                case 3:
+                    if (currIndex == 0) {
+                        animation = new TranslateAnimation(0, position_three, 0, 0);
+                        tab_home_icon.setImageResource(R.drawable.tab_home);
+                        tab_home_title.setTextColor(getResources().getColor(R.color.font_color));
+                    } else if (currIndex == 1) {
+                        animation = new TranslateAnimation(position_one, position_three, 0, 0);
+                        tab_category_icon.setImageResource(R.drawable.tab_category);
+                        tab_category_title.setTextColor(getResources().getColor(R.color.font_color));
+                    } else if (currIndex == 2) {
+                        animation = new TranslateAnimation(position_two, position_three, 0, 0);
+                        tab_me_icon.setImageResource(R.drawable.tab_me);
+                        tab_me_title.setTextColor(getResources().getColor(R.color.font_color));
+                    }
+                    tab_more_icon.setImageResource(R.drawable.tab_me_selected);
+                    tab_more_title.setTextColor(getResources().getColor(R.color.editor_pressed_color));
+                    break;
+            }
+            //记录当前的页面位置
+            currIndex = index;
+            //动画播放完后，保持结束时的状态
+            animation.setFillAfter(true);
+            //动画持续时间
+            animation.setDuration(300);
+            //底栏滑动白线开始动画
+            tabBottomLine.startAnimation(animation);
+        }
+
+        @Override
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
+
+        }
+    }
+
+    /**
+     *  初始化底栏，获取相应宽度信息
+     */
+    private void InitWidth() {
+
+        //获取底栏白色滑动线的宽度
+        bottomLineWidth = tabBottomLine.getLayoutParams().width;
+
+        //获取屏幕宽度
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int screenW = dm.widthPixels;
+        //屏幕分4份，计算出每份中白色滑条外的间隔距离
+        offset = (int) ((screenW / 4.0 - bottomLineWidth) / 2);
+
+        //计算出底栏的位置
+        position_one = (int) (screenW / 4.0);
+        position_two = position_one * 2;
+        position_three = position_one * 3;
+    }
+
+    private int currIndex = 0;
+    private int bottomLineWidth;
+    private int offset = 0;
+    private int position_one;
+    private int position_two;
+    private int position_three;
 }

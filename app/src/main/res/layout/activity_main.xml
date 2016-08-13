@@ -9,18 +9,138 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tabHost"
+        android:layout_above="@+id/layout_tabHost"
         android:background="@color/primary" />
 
-    <it.neokree.materialtabs.MaterialTabHost
-        android:id="@+id/tabHost"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
+    <LinearLayout
+        android:id="@+id/layout_tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:hasIcons="true"
-        app:accentColor="@color/tab_accent_color"
-        app:primaryColor="@color/tab_primary_color"
-        app:iconColor="@color/tab_accent_color"
-        app:textColor="@color/tab_accent_color" />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:paddingTop="1dip"
+            android:id="@+id/tabHost"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tab_home"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab_home_icon"
+                    android:src="@drawable/tab_home_selected" />
+
+                <TextView
+                    android:id="@+id/tab_home_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tab_title_home"
+                    android:textSize="12sp"
+                    android:textColor="@color/editor_pressed_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tab_category"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab_category_icon"
+                    android:src="@drawable/tab_category" />
+
+                <TextView
+                    android:id="@+id/tab_category_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tab_title_category"
+                    android:textSize="12sp"
+                    android:textColor="@color/font_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tab_me"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab_me_icon"
+                    android:src="@drawable/tab_me" />
+
+                <TextView
+                    android:id="@+id/tab_me_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tab_title_me"
+                    android:textSize="12sp"
+                    android:textColor="@color/font_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tab_more"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab_more_icon"
+                    android:src="@drawable/tab_more" />
+
+                <TextView
+                    android:id="@+id/tab_more_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tab_title_more"
+                    android:textSize="12sp"
+                    android:textColor="@color/font_color" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="3dip"
+            android:id="@+id/selecte_line">
+
+            <ImageView
+                android:id="@+id/tab_bottom_line"
+                android:layout_width="40dip"
+                android:layout_height="2dip"
+                android:layout_marginLeft="20dip"
+                android:scaleType="matrix"
+                android:src="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+
 
 </RelativeLayout>
