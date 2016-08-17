@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.ruptech.ai.App;
 import com.ruptech.ai.R;
 import com.ruptech.ai.main.MainActivity;
 
@@ -30,8 +31,6 @@ public class UploadPhotoActivity extends ActionBarActivity {
     private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
     private static final int PHOTO_REQUEST_CUT = 3;// 结果
 
-    private static final String SAVE_PIC_PATH = Environment.getExternalStorageState().equalsIgnoreCase(Environment.MEDIA_MOUNTED) ? Environment.getExternalStorageDirectory().getAbsolutePath() : "/mnt/sdcard ";//保存到SD卡
-    public static final String SAVE_REAL_PATH = SAVE_PIC_PATH + "/ai/savePic";//保存的确切位置
     public static final String PIC_NAME = "my_photo.jpg";
 
     ImageView mFace;
@@ -69,7 +68,7 @@ public class UploadPhotoActivity extends ActionBarActivity {
      */
     public void save(View view) {
         try {
-            saveFile(bitmap, PIC_NAME, SAVE_REAL_PATH);
+            saveFile(bitmap, PIC_NAME, App.SAVE_PIC_PATH);
         } catch (Exception e) {
             e.printStackTrace();
         }

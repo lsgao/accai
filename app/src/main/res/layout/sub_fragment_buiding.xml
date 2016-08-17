@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary">
+
+    <TextView
+        android:id="@+id/toolbar_building"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/pager_title_color"
+        android:text="@string/tab_title_buiding" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_building"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Building..."
+        android:id="@+id/content_building"
+        android:textColor="@color/font_color" />
+
+</RelativeLayout>

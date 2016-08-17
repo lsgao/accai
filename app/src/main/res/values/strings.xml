@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Robot AI</string>
+    <string name="app_name">ROBOT AI</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_username">用户名</string>
+    <string name="prompt_username">请输入用户名</string>
     <string name="prompt_password">密码</string>
     <string name="robot_welcome">欢迎使用</string>
-    <string name="action_sign_in">登录系统</string>
+    <string name="action_sign_in">登录</string>
     <string name="action_sign_in_short">登录</string>
     <string name="error_invalid_username">用户名无效</string>
     <string name="error_invalid_password">密码长度不够</string>
@@ -19,6 +19,7 @@
     <string name="tab_title_category">类别</string>
     <string name="tab_title_me">我的</string>
     <string name="tab_title_more">更多</string>
+    <string name="tab_title_buiding">建设中</string>
     <string name="me_photo">头像上传</string>
     <string name="me_favorite">我的收藏</string>
     <string name="me_messages">新消息通知</string>

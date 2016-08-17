@@ -10,7 +10,7 @@
     <color name="ripple">#ff80ab</color>
     <color name="toolbar_background_color">#ffffff</color>
     <color name="tab_primary_color">#ffffff</color>
-    <color name="tab_accent_color">#99cccc</color>
+    <color name="login_button_bg_color">#ccffff</color>
     <color name="info_text_color">#333333</color>
     <color name="pager_title_color">#cccccc</color>
     <color name="home_title_color">#ff9933</color>

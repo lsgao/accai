@@ -1,6 +1,5 @@
 package com.ruptech.ai.main;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -26,7 +25,7 @@ public class HomeFragment extends Fragment {
 
     // TOOLBAR
     @InjectView(R.id.toolbar_home)
-    TextView toolbar;
+    ImageView toolbar;
 
     // 中间部分的分类图标
     @InjectView(R.id.imageView_category_xzfw)
@@ -96,6 +95,15 @@ public class HomeFragment extends Fragment {
     @InjectView(R.id.imageView_ZXGX_NEXT_2)
     ImageView zxgx_next_2;
 
+    @InjectView(R.id.layout_ZXGX_3)
+    RelativeLayout zxgx_item_3;
+    @InjectView(R.id.imageView_ZXGX_LOGO_3)
+    ImageView zxgx_logo_3;
+    @InjectView(R.id.textView_ZXGX_3)
+    TextView zxgx_3;
+    @InjectView(R.id.imageView_ZXGX_NEXT_3)
+    ImageView zxgx_next_3;
+
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -114,14 +122,13 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.inject(this, rootView);
-        //String title_home = getString(R.string.title_activity_actionbar) + " - " + App.readUser().getUsername();
-        String title_home = ">" + "\n" + "accenture";
-        toolbar.setText(title_home);
-        rmwd_1.setText(Utils.getSubString(MainActivity.xzfw_titles[0], 13, "..."));
-        rmwd_2.setText(Utils.getSubString(MainActivity.rlzy_titles[0], 13, "..."));
-        rmwd_3.setText(Utils.getSubString(MainActivity.itzc_titles[0], 13, "..."));
-        zxgx_1.setText(Utils.getSubString(MainActivity.xzfw_titles[1], 13, "..."));
-        zxgx_2.setText(Utils.getSubString(MainActivity.rlzy_titles[1], 13, "..."));
+
+        rmwd_1.setText(Utils.getSubString(MainActivity.xzfw_titles[0], 15, "..."));
+        rmwd_2.setText(Utils.getSubString(MainActivity.rlzy_titles[0], 15, "..."));
+        rmwd_3.setText(Utils.getSubString(MainActivity.itzc_titles[0], 15, "..."));
+        zxgx_1.setText(Utils.getSubString(MainActivity.xzfw_titles[1], 15, "..."));
+        zxgx_2.setText(Utils.getSubString(MainActivity.rlzy_titles[1], 15, "..."));
+        zxgx_3.setText(Utils.getSubString(MainActivity.itzc_titles[1], 15, "..."));
 
         category_xzfw_image.setOnClickListener(new View.OnClickListener() {
 
@@ -155,14 +162,14 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionListFragment(MainActivity.TYPE_CWZX);
+                moveToQuestionBuildingFragment("财务咨询", "[财务咨询内容更新中...]");
             }
         });
         category_cwzx_text.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionListFragment(MainActivity.TYPE_CWZX);
+                moveToQuestionBuildingFragment("财务咨询", "[财务咨询内容更新中...]");
             }
         });
         category_itzc_image.setOnClickListener(new View.OnClickListener() {
@@ -324,6 +331,36 @@ public class HomeFragment extends Fragment {
                 moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 1);
             }
         });
+
+        zxgx_item_3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 1);
+            }
+        });
+        zxgx_logo_3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 1);
+            }
+        });
+        zxgx_3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 1);
+            }
+        });
+        zxgx_next_3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 1);
+            }
+        });
+
         return rootView;
     }
 
@@ -342,6 +379,16 @@ public class HomeFragment extends Fragment {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 
         Fragment target = QuestionListFragment.newInstance(type);
+        ft.replace(R.id.question_main_fragment, target);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.commit();
+    }
+
+    public void moveToQuestionBuildingFragment(String title, String content) {
+        ((MainActivity) getActivity()).pager.setCurrentItem(1);
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+
+        Fragment target = BuildingFragment.newInstance(title, content);
         ft.replace(R.id.question_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();

@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ruptech.ai.App;
 import com.ruptech.ai.R;
 import com.ruptech.ai.me.MeFirstFragment;
 import com.ruptech.ai.me.UploadPhotoActivity;
@@ -49,12 +50,15 @@ public class MainActivity extends ActionBarActivity {
     public static final String EXTRA_INDEX = "EXTRA_INDEX";
     public static final String EXTRA_KIND = "EXTRA_KIND";
 
+    public static final String EXTRA_TITLE = "EXTRA_TITLE";
+    public static final String EXTRA_CONTNET = "EXTRA_CONTNET";
+
     public static final int TAKE_PHOTO = 1;
 
     public static MainActivity instance = null;
 
     @InjectView(R.id.pager)
-    ViewPager pager;
+    public ViewPager pager;
 
     @InjectView(R.id.tab_home)
     LinearLayout tab_home;
@@ -157,7 +161,7 @@ public class MainActivity extends ActionBarActivity {
             try {
                 ImageView photo = getUsePhoto();
                 if (null != photo) {
-                    Bitmap bm = BitmapFactory.decodeFile(UploadPhotoActivity.SAVE_REAL_PATH + "/" + UploadPhotoActivity.PIC_NAME);
+                    Bitmap bm = BitmapFactory.decodeFile(App.SAVE_PIC_PATH + "/" + UploadPhotoActivity.PIC_NAME);
                     if (null != bm) {
                         photo.setImageBitmap(bm);
                     }
@@ -205,7 +209,7 @@ public class MainActivity extends ActionBarActivity {
                 getString(R.string.tab_title_category) // Title
         ) {
             public Fragment createFragment() {
-                return QuestionFragment.newInstance(MainActivity.TYPE_CWZX, "0", QuestionFragment.KIND_LIST);
+                return QuestionFragment.newInstance(MainActivity.TYPE_XZFW, "0", QuestionFragment.KIND_LIST);
             }
         });
 
@@ -251,8 +255,9 @@ public class MainActivity extends ActionBarActivity {
                         moveToQuestionListFragment(type);
                         break;
                     case 2:
-                        type = MainActivity.TYPE_CWZX;
-                        moveToQuestionListFragment(type);
+                        //type = MainActivity.TYPE_CWZX;
+                        //moveToQuestionListFragment(type);
+                        moveToQuestionBuildingFragment("财务咨询", "[财务咨询内容更新中...]");
                         break;
                     case 3:
                         type = MainActivity.TYPE_ITZC;
@@ -273,6 +278,16 @@ public class MainActivity extends ActionBarActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
         Fragment target = QuestionListFragment.newInstance(type);
+        ft.replace(R.id.question_main_fragment, target);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.commit();
+    }
+
+    public void moveToQuestionBuildingFragment(String title, String content) {
+        pager.setCurrentItem(1);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+        Fragment target = BuildingFragment.newInstance(title, content);
         ft.replace(R.id.question_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();

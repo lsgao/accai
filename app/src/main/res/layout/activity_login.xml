@@ -3,25 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".LoginActivity">
-    <LinearLayout
-        android:id="@+id/login_logo_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_centerHorizontal="true">
-        <TextView
-            style="@style/app_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name" />
-        <ImageView
-            android:id="@+id/login_logo_image"
-            android:layout_width="192dp"
-            android:layout_height="192dp"
-                  android:src="@drawable/ic_launcher" />
-    </LinearLayout>
+    tools:context=".LoginActivity"
+    android:background="@drawable/login_bg"
+    android:gravity="center_vertical|center_horizontal">
 
     <LinearLayout
         android:id="@+id/login_form_layout"
@@ -30,40 +14,44 @@
         android:orientation="vertical"
         android:layout_alignParentBottom="true">
 
-        <EditText
-            android:id="@+id/login_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_username"
-            android:maxLines="1"
-            android:singleLine="true" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/layout_login_text">
 
-        <EditText
-            android:id="@+id/login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_password"
-            android:imeActionId="@+id/login"
-            android:imeActionLabel="@string/action_sign_in_short"
-            android:imeOptions="actionUnspecified"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:visibility="gone"
-            android:text="password"
-            android:singleLine="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/login_user"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/layout_login_text" />
+
+            <EditText
+                android:id="@+id/login_username"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:hint="@string/prompt_username"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:autoText="false" />
+        </RelativeLayout>
 
         <Button
             android:id="@+id/login_sign_in_button"
-            style="@style/button_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_height="40dp"
             android:text="@string/action_sign_in"
-            android:textStyle="bold" />
+            android:background="@drawable/layout_login_button"
+            style="@style/button_text"
+            android:clickable="true" />
 
     </LinearLayout>
 
 </RelativeLayout>
-
-
-

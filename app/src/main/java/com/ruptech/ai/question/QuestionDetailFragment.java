@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ruptech.ai.App;
 import com.ruptech.ai.R;
 import com.ruptech.ai.main.MainActivity;
 import com.ruptech.ai.utils.Utils;
@@ -15,14 +16,20 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 
 public class QuestionDetailFragment extends Fragment {
     private static final String TAG = QuestionDetailFragment.class.getName();
+
+    public static final String PROPERTIES_NAME = "my.properties";
 
     private String type;
     private int index;
@@ -33,6 +40,16 @@ public class QuestionDetailFragment extends Fragment {
     TextView content;
     @InjectView(R.id.return_icon_question_detail)
     ImageView returnIcon;
+
+    @InjectView(R.id.button_praise_question_detail)
+    LinearLayout button_praise;
+    @InjectView(R.id.imageView_question_detail_praise)
+    ImageView icon_praise;
+    @InjectView(R.id.button_favorite_question_detail)
+    LinearLayout button_favorite;
+    @InjectView(R.id.imageView_question_detail_favorite)
+    ImageView icon_favorite;
+
 
     public static QuestionDetailFragment newInstance(String type, String index) {
         QuestionDetailFragment fragment = new QuestionDetailFragment();
@@ -88,8 +105,108 @@ public class QuestionDetailFragment extends Fragment {
             }
         });
 
+        if(isPraise(type, index)) {
+            icon_praise.setImageResource(R.drawable.icon_praise_light);
+        } else {
+            icon_praise.setImageResource(R.drawable.icon_praise);
+        }
+
+        button_praise.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                praise(type, index);
+            }
+        });
+
+
+        if(isFavorite(type, index)) {
+            icon_favorite.setImageResource(R.drawable.icon_favorite_light);
+        } else {
+            icon_favorite.setImageResource(R.drawable.icon_favorite);
+        }
+
+        button_favorite.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                favorite(type, index);
+            }
+        });
+
         return rootView;
 
+    }
+
+    private void favorite(String type, int index) {
+        String pro_name = "favorite_" + type + "_" + index;
+        if(isFavorite(type, index)) {
+            Properties properties = loadProPerties();
+            saveProPerties(properties, pro_name, new String("0"));
+            icon_favorite.setImageResource(R.drawable.icon_favorite);
+        } else {
+            Properties properties = loadProPerties();
+            saveProPerties(properties, pro_name, new String("1"));
+            icon_favorite.setImageResource(R.drawable.icon_favorite_light);
+        }
+    }
+
+    private boolean isFavorite(String type, int index) {
+        String pro_name = "favorite_" + type + "_" + index;
+        Properties properties = loadProPerties();
+        String favorite = ((String)properties.get(pro_name));
+        if(("1").equals(favorite)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void praise(String type, int index) {
+        String pro_name = "praise_" + type + "_" + index;
+        if(isPraise(type, index)) {
+            Properties properties = loadProPerties();
+            saveProPerties(properties, pro_name, new String("0"));
+            icon_praise.setImageResource(R.drawable.icon_praise);
+        } else {
+            Properties properties = loadProPerties();
+            saveProPerties(properties, pro_name, new String("1"));
+            icon_praise.setImageResource(R.drawable.icon_praise_light);
+        }
+    }
+
+    private boolean isPraise(String type, int index) {
+        String pro_name = "praise_" + type + "_" + index;
+        Properties properties = loadProPerties();
+        String favorite = ((String)properties.get(pro_name));
+        if(("1").equals(favorite)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private Properties loadProPerties() {
+        String subForder = App.SAVE_FILE_PATH;
+        File folder = new File(subForder);
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+        File file = new File(subForder, PROPERTIES_NAME);
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        Properties properties = App.loadProperties(getActivity(),App.SAVE_FILE_PATH + "/" + PROPERTIES_NAME );
+        return properties;
+    }
+
+    private void saveProPerties(Properties properties, String key, String value) {
+        properties.put(key, value);
+        App.saveConfig(getActivity(), App.SAVE_FILE_PATH + "/" + PROPERTIES_NAME, properties);
     }
 
     private void moveToQuestionListFragment(int index) {

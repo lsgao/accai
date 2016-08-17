@@ -5,98 +5,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="35dp"
-        android:id="@+id/top_question_detail"
-        android:gravity="center_vertical"
-        android:background="@drawable/layout_border">
+        android:layout_height="wrap_content" >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/return_icon_question_detail"
-            android:clickable="true"
-            android:src="@drawable/icon_return" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:id="@+id/toolbar_question_detail"
-            android:gravity="center_vertical|center_horizontal"
-            android:textColor="@color/pager_title_color" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/top_question_detail">
-
-        <TextView
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Question Content"
-            android:id="@+id/textView_question_detail"
-            android:textColor="@color/font_color"
-            android:minHeight="200dp" />
+            android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView_question_detail"
-            android:layout_gravity="right">
-
-            <LinearLayout
+            <RelativeLayout
                 android:orientation="horizontal"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:id="@+id/top_question_detail"
                 android:gravity="center_vertical"
-                android:background="@drawable/layout_button">
+                android:background="@drawable/layout_border">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView_question_detail_praise"
-                    android:src="@drawable/icon_praise"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_height="fill_parent"
+                    android:id="@+id/return_icon_question_detail"
+                    android:clickable="true"
+                    android:src="@drawable/icon_return" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/button_praise"
-                    android:id="@+id/textView_question_detail_praise"
-                    android:layout_marginLeft="5dp" />
-            </LinearLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/toolbar_question_detail"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/pager_title_color" />
+            </RelativeLayout>
+
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:gravity="center_vertical"
-                android:background="@drawable/layout_button"
-                android:layout_marginLeft="10dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView_question_detail_favorite"
-                    android:src="@drawable/icon_favorite"
-                    android:layout_marginLeft="10dp" />
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_question_detail">
 
                 <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Question Content"
+                    android:id="@+id/textView_question_detail"
+                    android:textColor="@color/font_color"
+                    android:minHeight="200dp"
+                    android:autoLink="all" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/button_favorite"
-                    android:id="@+id/textView_question_detail_favorite"
-                    android:layout_marginLeft="5dp" />
-            </LinearLayout>
+                    android:layout_below="@+id/textView_question_detail"
+                    android:layout_gravity="right">
 
-        </LinearLayout>
-    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/layout_button"
+                        android:id="@+id/button_praise_question_detail">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView_question_detail_praise"
+                            android:src="@drawable/icon_praise"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/button_praise"
+                            android:id="@+id/textView_question_detail_praise"
+                            android:layout_marginLeft="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/layout_button"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/button_favorite_question_detail">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView_question_detail_favorite"
+                            android:src="@drawable/icon_favorite"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/button_favorite"
+                            android:id="@+id/textView_question_detail_favorite"
+                            android:layout_marginLeft="5dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

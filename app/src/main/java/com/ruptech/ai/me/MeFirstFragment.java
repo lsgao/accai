@@ -41,6 +41,8 @@ public class MeFirstFragment extends Fragment {
     TextView textView_photo_title;
 
     // 我的收藏
+    @InjectView(R.id.item_me_first_favorite)
+    LinearLayout item_favorite;
     @InjectView(R.id.imageView_me_first_favorite_logo)
     ImageView imageView_favorite_logo;
     @InjectView(R.id.textView_me_first_favorite_title)
@@ -73,7 +75,7 @@ public class MeFirstFragment extends Fragment {
             }
         });
 
-        Bitmap bm = BitmapFactory.decodeFile(UploadPhotoActivity.SAVE_REAL_PATH + "/" + UploadPhotoActivity.PIC_NAME);
+        Bitmap bm = BitmapFactory.decodeFile(App.SAVE_PIC_PATH + "/" + UploadPhotoActivity.PIC_NAME);
         if (null != bm) {
             user_photo.setImageBitmap(bm);
         }
@@ -103,6 +105,13 @@ public class MeFirstFragment extends Fragment {
         });
 
         // 我的收藏
+        item_favorite.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToMeFavoriteFragment();
+            }
+        });
         imageView_favorite_logo.setOnClickListener(new View.OnClickListener() {
 
             @Override

@@ -15,12 +15,13 @@
 
         <TextView
             android:id="@+id/toolbar_me"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center_vertical|center_horizontal"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/pager_title_color"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:text="@string/tab_title_me" />
         <TextView
             android:id="@+id/logout_icon_me_first"
             android:layout_width="wrap_content"
@@ -139,32 +140,5 @@
                 android:textColor="@color/font_color" />
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:background="@drawable/layout_border"
-            android:gravity="center_vertical"
-            android:id="@+id/item_me_first_flash">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:id="@+id/imageView_me_first_flash_logo"
-                android:contentDescription="@string/me_flash"
-                android:src="@drawable/me_setting"
-                android:clickable="true"
-                android:layout_margin="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/me_flash"
-                android:id="@+id/textView_me_first_flash_title"
-                android:clickable="true"
-                android:textColor="@color/font_color" />
-        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

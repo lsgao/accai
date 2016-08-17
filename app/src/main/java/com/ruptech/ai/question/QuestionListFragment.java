@@ -15,6 +15,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -32,6 +33,8 @@ public class QuestionListFragment extends Fragment {
     private List<Map<String, Object>> items;
     @InjectView(R.id.toolbar_question_list)
     TextView toolbar;
+    @InjectView(R.id.top_question_list)
+    ImageView top_question_list;
     @InjectView(R.id.listView_question_list)
     ListView listView;
 
@@ -61,21 +64,24 @@ public class QuestionListFragment extends Fragment {
         if (MainActivity.TYPE_XZFW.equals(type)) {
             String title = getString(R.string.title_item_xzfw);
             toolbar.setText(title);
+            top_question_list.setImageResource(R.drawable.category_top_xzfw);
         } else if (MainActivity.TYPE_RLZY.equals(type)) {
             String title = getString(R.string.title_item_rlzy);
             toolbar.setText(title);
+            top_question_list.setImageResource(R.drawable.category_top_rlzy);
         } else if (MainActivity.TYPE_CWZX.equals(type)) {
             String title = getString(R.string.title_item_cwzx);
             toolbar.setText(title);
+            //top_question_list.setImageResource(R.drawable.category_top_cwzx);
         } else if (MainActivity.TYPE_ITZC.equals(type)) {
             String title = getString(R.string.title_item_itzc);
             toolbar.setText(title);
+            top_question_list.setImageResource(R.drawable.category_top_itzc);
         }
         SimpleAdapter adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question,
                 new String[]{"TITLE"},
                 new int[]{R.id.item_question_title});
         listView.setAdapter(adapter);
-//        listView.setOnItemClickListener(this);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -97,11 +103,13 @@ public class QuestionListFragment extends Fragment {
             titles = MainActivity.cwzx_titles;
         } else if (MainActivity.TYPE_ITZC.equals(type)) {
             titles = MainActivity.itzc_titles;
+            titles = MainActivity.itzc_titles;
         }
         List<Map<String, Object>> result = new ArrayList<Map<String, Object>>();
 
         for (int i = 0; i < titles.length; i++) {
             Map<String, Object> temp = new HashMap<String, Object>();
+
             temp.put("TITLE", Utils.getSubString(titles[i], 17, "..."));
             result.add(temp);
         }

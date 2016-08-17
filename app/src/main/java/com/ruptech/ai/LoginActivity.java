@@ -32,8 +32,7 @@ public class LoginActivity extends ActionBarActivity {
     // UI references.
     @InjectView(R.id.login_username)
     EditText mUsernameView;
-    @InjectView(R.id.login_password)
-    EditText mPasswordView;
+
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -55,17 +54,6 @@ public class LoginActivity extends ActionBarActivity {
             finish();
             return;
         }
-
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
-            }
-        });
 
     }
 
@@ -93,22 +81,12 @@ public class LoginActivity extends ActionBarActivity {
 
         // Reset errors.
         mUsernameView.setError(null);
-        mPasswordView.setError(null);
 
         // Store values at the time of the login attempt.
         String username = mUsernameView.getText().toString();
-        String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
-
-
-        // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
-            focusView = mPasswordView;
-            cancel = true;
-        }
 
         // Check for a valid username address.
         if (TextUtils.isEmpty(username)) {
@@ -128,7 +106,7 @@ public class LoginActivity extends ActionBarActivity {
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
-            mAuthTask = new UserLoginTask(username, password);
+            mAuthTask = new UserLoginTask(username, "");
             mAuthTask.execute((Void) null);
         }
     }
@@ -142,8 +120,8 @@ public class LoginActivity extends ActionBarActivity {
             finish();
             gotoMainActivity();
         } else {
-            mPasswordView.setError(getString(R.string.error_incorrect_password));
-            mPasswordView.requestFocus();
+            mUsernameView.setError(getString(R.string.error_invalid_username));
+            mUsernameView.requestFocus();
         }
     }
 
