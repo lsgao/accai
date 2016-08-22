@@ -11,8 +11,8 @@ import android.view.animation.Animation;
  * Created by ls_gao on 2016/8/17.
  */
 public class StartActivity extends Activity {
-    @Override
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -62,9 +62,7 @@ public class StartActivity extends Activity {
     private void redirectTo() {
 
         Intent intent = new Intent(this, LoginActivity.class);
-
         startActivity(intent);
-
         finish();
 
     }

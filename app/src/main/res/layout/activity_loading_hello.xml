@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="@color/primary">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/words_hello"
+        android:src="@drawable/robot_hello_words" />
+
+    <com.ruptech.widget.GifImageView
+        android:id="@+id/gif_hello"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/words_hello"
+        android:layout_centerInParent="true"
+        android:src="@drawable/robot_hello"
+        attr:auto_play="true"
+        />
+
+
+</RelativeLayout>

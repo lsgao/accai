@@ -13,7 +13,8 @@
         android:gravity="center_vertical|center_horizontal"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/pager_title_color"
-        android:text="@string/tab_title_buiding" />
+        android:text="@string/tab_title_buiding"
+        android:background="@drawable/layout_border" />
 
     <TextView
         android:layout_width="fill_parent"

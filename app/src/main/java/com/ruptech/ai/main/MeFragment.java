@@ -6,14 +6,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
+import com.ruptech.ai.MainActivity;
 import com.ruptech.ai.R;
 import com.ruptech.ai.me.MeFavoriteFragment;
 import com.ruptech.ai.me.MeFirstFragment;
-import com.ruptech.ai.more.MoreAboutFragment;
-import com.ruptech.ai.more.MoreFirstFragment;
-import com.ruptech.ai.more.MoreProposalFragment;
 
 import butterknife.ButterKnife;
 

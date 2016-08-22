@@ -16,7 +16,8 @@ import android.widget.TextView;
 import com.ruptech.ai.App;
 import com.ruptech.ai.LoginActivity;
 import com.ruptech.ai.R;
-import com.ruptech.ai.main.MainActivity;
+import com.ruptech.ai.MainActivity;
+import com.ruptech.ai.loading.LoadingByeActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -130,8 +131,6 @@ public class MeFirstFragment extends Fragment {
         return rootView;
     }
 
-
-
     private void moveToMeFavoriteFragment() {
 
         MainActivity mainActivity = (MainActivity) this.getActivity();
@@ -152,7 +151,7 @@ public class MeFirstFragment extends Fragment {
 
     private void logout() {
         App.logout();
-        Intent intent = new Intent(getActivity(), LoginActivity.class);
+        Intent intent = new Intent(getActivity(), LoadingByeActivity.class);
         startActivity(intent);
     }
 

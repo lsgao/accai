@@ -7,9 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ruptech.ai.MainActivity;
 import com.ruptech.ai.R;
 import com.ruptech.ai.question.QuestionDetailFragment;
 import com.ruptech.ai.question.QuestionListFragment;
+import com.ruptech.ai.question.QuestionLoadingFragment;
 import com.ruptech.ai.utils.Utils;
 
 import butterknife.ButterKnife;
@@ -191,28 +193,28 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 0);
+                displayQuestion(MainActivity.TYPE_XZFW, 0);
             }
         });
         rmwd_logo_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 0);
+                displayQuestion(MainActivity.TYPE_XZFW, 0);
             }
         });
         rmwd_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 0);
+                displayQuestion(MainActivity.TYPE_XZFW, 0);
             }
         });
         rmwd_next_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 0);
+                displayQuestion(MainActivity.TYPE_XZFW, 0);
             }
         });
 
@@ -220,28 +222,28 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+                displayQuestion(MainActivity.TYPE_RLZY, 0);
             }
         });
         rmwd_logo_2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+                displayQuestion(MainActivity.TYPE_RLZY, 0);
             }
         });
         rmwd_2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+                displayQuestion(MainActivity.TYPE_RLZY, 0);
             }
         });
         rmwd_next_2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 0);
+                displayQuestion(MainActivity.TYPE_RLZY, 0);
             }
         });
 
@@ -249,28 +251,28 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 0);
+                displayQuestion(MainActivity.TYPE_ITZC, 0);
             }
         });
         rmwd_logo_3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 0);
+                displayQuestion(MainActivity.TYPE_ITZC, 0);
             }
         });
         rmwd_3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 0);
+                displayQuestion(MainActivity.TYPE_ITZC, 0);
             }
         });
         rmwd_next_3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 0);
+                displayQuestion(MainActivity.TYPE_ITZC, 0);
             }
         });
 
@@ -278,28 +280,28 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 1);
+                displayQuestion(MainActivity.TYPE_XZFW, 1);
             }
         });
         zxgx_logo_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 1);
+                displayQuestion(MainActivity.TYPE_XZFW, 1);
             }
         });
         zxgx_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 1);
+                displayQuestion(MainActivity.TYPE_XZFW, 1);
             }
         });
         zxgx_next_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_XZFW, 1);
+                displayQuestion(MainActivity.TYPE_XZFW, 1);
             }
         });
 
@@ -307,28 +309,28 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 1);
+                displayQuestion(MainActivity.TYPE_RLZY, 1);
             }
         });
         zxgx_logo_2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 1);
+                displayQuestion(MainActivity.TYPE_RLZY, 1);
             }
         });
         zxgx_2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 1);
+                displayQuestion(MainActivity.TYPE_RLZY, 1);
             }
         });
         zxgx_next_2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_RLZY, 1);
+                displayQuestion(MainActivity.TYPE_RLZY, 1);
             }
         });
 
@@ -336,62 +338,76 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 1);
+                displayQuestion(MainActivity.TYPE_ITZC, 1);
             }
         });
         zxgx_logo_3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 1);
+                displayQuestion(MainActivity.TYPE_ITZC, 1);
             }
         });
         zxgx_3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 1);
+                displayQuestion(MainActivity.TYPE_ITZC, 1);
             }
         });
         zxgx_next_3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                moveToQuestionDetailFragment(MainActivity.TYPE_ITZC, 1);
+                displayQuestion(MainActivity.TYPE_ITZC, 1);
             }
         });
 
         return rootView;
     }
 
-    public void moveToQuestionDetailFragment(String type, int index) {
-        ((MainActivity) getActivity()).pager.setCurrentItem(1);
-        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+    public void displayQuestion(String type, int index) {
+        moveToQuestionLoadingFragment(type, index);
+    }
 
-        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
+//    public void moveToQuestionDetailFragment(String type, int index) {
+//        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+//
+//        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
+//        ft.replace(R.id.question_main_fragment, target);
+//        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//        ft.commit();
+//        ((MainActivity) getActivity()).pager.setCurrentItem(1);
+//    }
+
+    public void moveToQuestionLoadingFragment(String type, int index) {
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        Fragment target = QuestionLoadingFragment.newInstance(type, new Integer(index).toString());
         ft.replace(R.id.question_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
+
+        ((MainActivity) getActivity()).pager.setCurrentItem(1);
     }
 
     public void moveToQuestionListFragment(String type) {
-        ((MainActivity) getActivity()).pager.setCurrentItem(1);
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-
         Fragment target = QuestionListFragment.newInstance(type);
         ft.replace(R.id.question_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
+
+        ((MainActivity) getActivity()).pager.setCurrentItem(1);
     }
 
     public void moveToQuestionBuildingFragment(String title, String content) {
-        ((MainActivity) getActivity()).pager.setCurrentItem(1);
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-
         Fragment target = BuildingFragment.newInstance(title, content);
         ft.replace(R.id.question_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
+
+        ((MainActivity) getActivity()).pager.setCurrentItem(1);
     }
 }
 

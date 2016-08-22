@@ -49,7 +49,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/top10questions"
                 android:id="@+id/textView_RMWD_TITLE"
-                android:textColor="@color/home_title_color" />
+                android:textColor="@color/list_title_color" />
         </LinearLayout>
 
         <ListView

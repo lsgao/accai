@@ -15,8 +15,9 @@ import android.widget.TextView;
 
 import com.ruptech.ai.App;
 import com.ruptech.ai.R;
-import com.ruptech.ai.main.MainActivity;
+import com.ruptech.ai.MainActivity;
 import com.ruptech.ai.question.QuestionDetailFragment;
+import com.ruptech.ai.question.QuestionLoadingFragment;
 import com.ruptech.ai.utils.Utils;
 
 import java.io.File;
@@ -74,7 +75,7 @@ public class MeFavoriteFragment extends Fragment {
                 e.printStackTrace();
             }
         }
-        properties = App.loadProperties(getActivity(),App.SAVE_FILE_PATH + "/" + QuestionDetailFragment.PROPERTIES_NAME );
+        properties = App.loadProperties(getActivity(), App.SAVE_FILE_PATH + "/" + QuestionDetailFragment.PROPERTIES_NAME);
 
     }
 
@@ -92,14 +93,12 @@ public class MeFavoriteFragment extends Fragment {
             }
         });
 
-        List<Map<String, Object>> items;
-        SimpleAdapter adapter;
 
-        items = initItems(MainActivity.TYPE_XZFW);
-        adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question,
+        List<Map<String, Object>> items_xzfw = initItems(MainActivity.TYPE_XZFW);
+        SimpleAdapter adapter_xzfw = new SimpleAdapter(getActivity(), items_xzfw, R.layout.item_favorite,
                 new String[]{"TITLE"},
                 new int[]{R.id.item_question_title});
-        listView_xzfw.setAdapter(adapter);
+        listView_xzfw.setAdapter(adapter_xzfw);
         listView_xzfw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -109,11 +108,11 @@ public class MeFavoriteFragment extends Fragment {
         });
         setListViewHeight(listView_xzfw);
 
-        items = initItems(MainActivity.TYPE_RLZY);
-        adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question,
+        List<Map<String, Object>> items_rlzy = initItems(MainActivity.TYPE_RLZY);
+        SimpleAdapter adapter_rlzy = new SimpleAdapter(getActivity(), items_rlzy, R.layout.item_favorite,
                 new String[]{"TITLE"},
                 new int[]{R.id.item_question_title});
-        listView_rlzy.setAdapter(adapter);
+        listView_rlzy.setAdapter(adapter_rlzy);
         listView_rlzy.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -123,11 +122,11 @@ public class MeFavoriteFragment extends Fragment {
         });
         setListViewHeight(listView_rlzy);
 
-        items = initItems(MainActivity.TYPE_CWZX);
-        adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question,
+        List<Map<String, Object>> items_cwzx = initItems(MainActivity.TYPE_CWZX);
+        SimpleAdapter adapter_cwzx = new SimpleAdapter(getActivity(), items_cwzx, R.layout.item_favorite,
                 new String[]{"TITLE"},
                 new int[]{R.id.item_question_title});
-        listView_cwzx.setAdapter(adapter);
+        listView_cwzx.setAdapter(adapter_cwzx);
         listView_cwzx.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -137,11 +136,11 @@ public class MeFavoriteFragment extends Fragment {
         });
         setListViewHeight(listView_cwzx);
 
-        items = initItems(MainActivity.TYPE_ITZC);
-        adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question,
+        List<Map<String, Object>> items_itzc = initItems(MainActivity.TYPE_ITZC);
+        SimpleAdapter adapter_itzc = new SimpleAdapter(getActivity(), items_itzc, R.layout.item_favorite,
                 new String[]{"TITLE"},
                 new int[]{R.id.item_question_title});
-        listView_itzc.setAdapter(adapter);
+        listView_itzc.setAdapter(adapter_itzc);
         listView_itzc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -179,24 +178,34 @@ public class MeFavoriteFragment extends Fragment {
     }
 
     public void onListItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3, String category) {
-        moveToQuestionDetailFragment(category, arg2);
+        displayQuestion(category, arg2);
     }
 
-    public void moveToQuestionDetailFragment(String type, int index) {
-        ((MainActivity) getActivity()).pager.setCurrentItem(1);
-        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+    public void displayQuestion(String type, int index) {
+        moveToQuestionLoadingFragment(type, index);
+    }
 
-        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
+//    public void moveToQuestionDetailFragment(String type, int index) {
+//        ((MainActivity) getActivity()).pager.setCurrentItem(1);
+//        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+//        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
+//        ft.replace(R.id.question_main_fragment, target);
+//        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//        ft.commit();
+//    }
+
+    public void moveToQuestionLoadingFragment(String type, int index) {
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        Fragment target = QuestionLoadingFragment.newInstance(type, new Integer(index).toString());
         ft.replace(R.id.question_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
+
+        ((MainActivity) getActivity()).pager.setCurrentItem(1);
     }
 
     private void moveToMeFirstFragment() {
-
-        MainActivity mainActivity = (MainActivity) this.getActivity();
-        FragmentTransaction ft = mainActivity.getSupportFragmentManager().beginTransaction();
-
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         Fragment target = MeFirstFragment.newInstance();
         ft.replace(R.id.me_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
@@ -220,7 +229,7 @@ public class MeFavoriteFragment extends Fragment {
 
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
-        ((ViewGroup.MarginLayoutParams)params).setMargins(10, 10, 10, 10);
+        ((ViewGroup.MarginLayoutParams) params).setMargins(10, 10, 10, 10);
         listView.setLayoutParams(params);
     }
 }

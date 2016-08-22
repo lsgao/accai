@@ -1,8 +1,8 @@
 package com.ruptech.ai.me;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -16,14 +16,11 @@ import android.widget.Toast;
 
 import com.ruptech.ai.App;
 import com.ruptech.ai.R;
-import com.ruptech.ai.main.MainActivity;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import butterknife.InjectView;
 
 public class UploadPhotoActivity extends ActionBarActivity {
 
@@ -45,6 +42,13 @@ public class UploadPhotoActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_photo);
         this.mFace = (ImageView) this.findViewById(R.id.imageView_upload_photo_image);
+        File myCaptureFile = new File(App.SAVE_PIC_PATH, PIC_NAME);
+        if (myCaptureFile.exists()) {
+            bitmap = BitmapFactory.decodeFile(App.SAVE_PIC_PATH + "/" + UploadPhotoActivity.PIC_NAME);
+            if (null != bitmap) {
+                mFace.setImageBitmap(bitmap);
+            }
+        }
     }
 
     @Override
@@ -93,8 +97,7 @@ public class UploadPhotoActivity extends ActionBarActivity {
         // 判断存储卡是否可以用，可用进行存储
         if (hasSdcard()) {
             intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                    Uri.fromFile(new File(Environment
-                            .getExternalStorageDirectory(), PHOTO_FILE_NAME)));
+                    Uri.fromFile(new File(App.SAVE_PIC_PATH, PHOTO_FILE_NAME)));
         }
         startActivityForResult(intent, PHOTO_REQUEST_CAMERA);
     }
@@ -117,8 +120,7 @@ public class UploadPhotoActivity extends ActionBarActivity {
 
         } else if (requestCode == PHOTO_REQUEST_CAMERA) {
             if (hasSdcard()) {
-                tempFile = new File(Environment.getExternalStorageDirectory(),
-                        PHOTO_FILE_NAME);
+                tempFile = new File(App.SAVE_PIC_PATH, PHOTO_FILE_NAME);
                 crop(Uri.fromFile(tempFile));
             } else {
                 Toast.makeText(UploadPhotoActivity.this, getString(R.string.message_can_not_find_sdcard), Toast.LENGTH_SHORT).show();

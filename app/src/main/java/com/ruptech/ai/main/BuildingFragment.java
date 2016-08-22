@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ruptech.ai.MainActivity;
 import com.ruptech.ai.R;
 
 

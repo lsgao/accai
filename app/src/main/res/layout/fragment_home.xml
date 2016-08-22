@@ -175,7 +175,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/rmwd_title"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/home_title_color" />
+                        android:textColor="@color/list_title_color" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -219,7 +219,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/layout_border"
+                    android:background="@color/primary"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -303,7 +303,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/zxgx_title"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/home_title_color" />
+                        android:textColor="@color/list_title_color" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -348,7 +348,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/layout_border"
+                    android:background="@color/primary"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 

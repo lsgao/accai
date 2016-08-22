@@ -7,15 +7,12 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ruptech.ai.main.MainActivity;
+import com.ruptech.ai.loading.LoadingHelloActivity;
 import com.ruptech.ai.model.User;
 
 import butterknife.ButterKnife;
@@ -43,6 +40,11 @@ public class LoginActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    private void gotoLoadingHelloActivity() {
+        Intent intent = new Intent(this, LoadingHelloActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +52,8 @@ public class LoginActivity extends ActionBarActivity {
         ButterKnife.inject(this);
 
         if (App.readUser() != null) {
-            gotoMainActivity();
             finish();
+            gotoMainActivity();
             return;
         }
 
@@ -117,8 +119,8 @@ public class LoginActivity extends ActionBarActivity {
         if(null == login) {
             Toast.makeText(LoginActivity.this, getString(R.string.message_login_error), Toast.LENGTH_LONG).show();
         } else if (login) {
+            gotoLoadingHelloActivity();
             finish();
-            gotoMainActivity();
         } else {
             mUsernameView.setError(getString(R.string.error_invalid_username));
             mUsernameView.requestFocus();
@@ -128,11 +130,6 @@ public class LoginActivity extends ActionBarActivity {
     private boolean isUsernameValid(String username) {
         return username.length() > 4;
     }
-
-    private boolean isPasswordValid(String password) {
-        return password.length() > 4;
-    }
-
 
     /**
      * Represents an asynchronous login/registration task used to authenticate

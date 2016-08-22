@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ruptech.ai.MainActivity;
 import com.ruptech.ai.R;
 import com.ruptech.ai.question.QuestionDetailFragment;
 import com.ruptech.ai.question.QuestionListFragment;

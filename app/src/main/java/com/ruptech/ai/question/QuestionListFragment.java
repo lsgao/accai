@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ruptech.ai.R;
-import com.ruptech.ai.main.MainActivity;
+import com.ruptech.ai.MainActivity;
 import com.ruptech.ai.utils.Utils;
 
 import butterknife.ButterKnife;
@@ -118,14 +118,27 @@ public class QuestionListFragment extends Fragment {
     }
 
     public void onListItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-        moveToQuestionDetailFragment(arg2);
+        displayQuestion(arg2);
     }
 
-    private void moveToQuestionDetailFragment(int index) {
+    private void displayQuestion(int index) {
+        moveToQuestionLoadingFragment(index);
+    }
+//    private void moveToQuestionDetailFragment(int index) {
+//        MainActivity mainActivity = (MainActivity) this.getActivity();
+//        FragmentTransaction ft = mainActivity.getSupportFragmentManager().beginTransaction();
+//
+//        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
+//        ft.replace(R.id.question_main_fragment, target);
+//        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//        ft.commit();
+//    }
+
+    private void moveToQuestionLoadingFragment(int index) {
         MainActivity mainActivity = (MainActivity) this.getActivity();
         FragmentTransaction ft = mainActivity.getSupportFragmentManager().beginTransaction();
 
-        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
+        Fragment target = QuestionLoadingFragment.newInstance(type, new Integer(index).toString());
         ft.replace(R.id.question_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();

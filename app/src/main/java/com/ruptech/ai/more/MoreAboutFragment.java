@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ruptech.ai.R;
-import com.ruptech.ai.main.MainActivity;
+import com.ruptech.ai.MainActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

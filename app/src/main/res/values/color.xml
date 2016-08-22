@@ -13,7 +13,7 @@
     <color name="login_button_bg_color">#ccffff</color>
     <color name="info_text_color">#333333</color>
     <color name="pager_title_color">#cccccc</color>
-    <color name="home_title_color">#ff9933</color>
+    <color name="list_title_color">#ff9933</color>
     <color name="font_color">#aaaaaa</color>
 
     <color name="item_status_color_doing">#ffc400</color>

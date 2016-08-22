@@ -26,7 +26,7 @@
             android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:id="@+id/imageView_more_first_about"
-            android:src="@drawable/ic_launcher"
+            android:src="@drawable/more_about"
             android:layout_marginTop="50dp" />
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:id="@+id/imageView_more_first_proposal"
-            android:src="@drawable/logo_proposal"
+            android:src="@drawable/more_proposal"
             android:layout_marginTop="50dp" />
 
         <TextView

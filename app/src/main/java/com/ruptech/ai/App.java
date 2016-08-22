@@ -7,7 +7,6 @@ import android.util.Log;
 
 import com.baidu.android.pushservice.PushManager;
 import com.baidu.frontia.FrontiaApplication;
-import com.ruptech.ai.main.MainActivity;
 import com.ruptech.ai.model.User;
 import com.ruptech.ai.utils.AssetsPropertyReader;
 import com.ruptech.ai.utils.PrefUtils;

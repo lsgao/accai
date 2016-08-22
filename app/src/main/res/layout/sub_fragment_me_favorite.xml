@@ -44,19 +44,21 @@
                 android:layout_height="fill_parent"
                 android:layout_below="@id/top_me_favorite"
                 android:orientation="vertical"
-                android:id="@+id/layout_xzfw_me_favorite">
+                android:id="@+id/layout_xzfw_me_favorite"
+                android:background="@drawable/layout_border">
 
                 <TextView
                     android:id="@+id/title_xzfw_me_favorite"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="@string/title_item_xzfw"
+                    android:text="@string/title_item_xzfw_favorite"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/home_title_color" />
+                    android:textColor="@color/list_title_color"
+                    android:background="@drawable/layout_border" />
 
                 <ListView
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="fill_parent"
                     android:id="@+id/listView_xzfw_me_favorite"
                     android:background="@drawable/layout_border" />
@@ -67,19 +69,21 @@
                 android:layout_height="fill_parent"
                 android:layout_below="@id/layout_xzfw_me_favorite"
                 android:orientation="vertical"
-                android:id="@+id/layout_rlzy_me_favorite">
+                android:id="@+id/layout_rlzy_me_favorite"
+                android:background="@drawable/layout_border">
 
                 <TextView
                     android:id="@+id/title_rlzy_me_favorite"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="@string/title_item_rlzy"
+                    android:text="@string/title_item_rlzy_favorite"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/home_title_color" />
+                    android:textColor="@color/list_title_color"
+                    android:background="@drawable/layout_border" />
 
                 <ListView
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="fill_parent"
                     android:id="@+id/listView_rlzy_me_favorite"
                     android:background="@drawable/layout_border" />
@@ -90,16 +94,18 @@
                 android:layout_height="fill_parent"
                 android:layout_below="@id/layout_rlzy_me_favorite"
                 android:orientation="vertical"
-                android:id="@+id/layout_cwzx_me_favorite">
+                android:id="@+id/layout_cwzx_me_favorite"
+                android:background="@drawable/layout_border">
 
                 <TextView
                     android:id="@+id/title_cwzx_me_favorite"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="@string/title_item_cwzx"
+                    android:text="@string/title_item_cwzx_favorite"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/home_title_color" />
+                    android:textColor="@color/list_title_color"
+                    android:background="@drawable/layout_border" />
 
                 <ListView
                     android:layout_width="fill_parent"
@@ -113,19 +119,21 @@
                 android:layout_height="fill_parent"
                 android:layout_below="@id/layout_cwzx_me_favorite"
                 android:orientation="vertical"
-                android:id="@+id/layout_itzc_me_favorite">
+                android:id="@+id/layout_itzc_me_favorite"
+                android:background="@drawable/layout_border">
 
                 <TextView
                     android:id="@+id/title_itzc_me_favorite"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="@string/title_item_itzc"
+                    android:text="@string/title_item_itzc_favorite"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/home_title_color" />
+                    android:textColor="@color/list_title_color"
+                    android:background="@drawable/layout_border" />
 
                 <ListView
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="fill_parent"
                     android:id="@+id/listView_itzc_me_favorite"
                     android:background="@drawable/layout_border" />

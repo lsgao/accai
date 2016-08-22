@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="10dp">
+
+    <TableLayout
+        android:id="@+id/table_rlzy_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/font_color"
+        android:padding="0.5dip">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:background="@color/primary"
+                android:text="Referral Bonus Amount:"
+                android:textColor="@color/font_color"
+                android:textSize="8dp"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text=" Client Delivery &amp; Operations"
+                android:textColor="@color/font_color"
+                android:textSize="8dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+
+                android:background="@color/primary"
+                android:paddingTop="0.5dip"
+                android:text="Career  Level"
+                android:textColor="@color/font_color"
+                android:textSize="8dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="Employee Referral Bonus"
+                android:textColor="@color/font_color"
+                android:textSize="8dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="(RMB)"
+                android:textColor="@color/font_color"
+                android:textSize="8dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Accenture Leadership"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="30000"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Level 5-6"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="12000"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Level 7"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="7000"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Level 8"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="4000"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Level 9"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="4000"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Level 10"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="3500"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Level 11(work experience more than 12 months)"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="3500"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Level 12(work experience more than 12 months)"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="1500"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Level 13(work experience more than 12 months)"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:gravity="center_horizontal"
+                android:text="1500"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/table_itzc_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table_rlzy_14"
+        android:layout_marginTop="10dip"
+        android:background="@color/font_color"
+        android:padding="0.5dip">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Deal / Support\n function"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="SDL\n"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="User's \nEnterprise ID"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Office \nPhone"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Extension\n"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="WBS code for \nLync PE usage"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/table_itzc_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table_itzc_3"
+        android:layout_marginTop="10dip"
+        android:background="@color/font_color"
+        android:padding="0.5dip">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text="Location "
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="Building Floor      "
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="B29 1F, 3F, 7F"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:paddingTop="0.5dip"
+                android:text="Dalian"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="B24 3F-11F"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:paddingTop="0.5dip"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="B17 4F"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/font_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:background="@color/primary"
+                android:paddingTop="0.5dip"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="B15 6F"
+                android:textColor="@color/font_color"
+                android:textSize="8dp" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
