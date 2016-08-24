@@ -32,26 +32,26 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/app_name"
+            android:label="LoginActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name=".loading.LoadingHelloActivity"
-            android:label="@string/app_name"
+            android:label="LoadingHelloActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_actionbar"
             android:launchMode="singleTop" />
         <activity
             android:name=".me.UploadPhotoActivity"
-            android:label="@string/title_activity_upload_photo" />
+            android:label="UploadPhotoActivity" />
         <activity
             android:name=".loading.LoadingByeActivity"
-            android:label="@string/app_name"
+            android:label="LoadingByeActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>

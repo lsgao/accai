@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="xzfw_title">
-        <item>如何领用文具？</item>
+        <item>员工文具领用流程</item>
         <item>员工忘带门禁卡了怎么办？</item>
         <item>门禁卡丢失或者损坏了怎么处理？</item>
         <item>如何申请照片卡？</item>
@@ -14,8 +14,8 @@
         <item>其他</item>
     </string-array>
     <string-array name="xzfw_content">
-        <item>●　如果您在24号楼，请到24号楼5层文具室领取申请的文具，分机:　35854。\n●　如果您在15或17号楼，请到前台领取文具。\n●　3，6，7号楼的邮件和文具服务没有变化。\n●　BPO文具领用流程不变。\n●　如果您在29号楼，请按照下述方法安装AIOA，\n　　1)　扫描下面的二维码（不要使用微信扫描），\n　　2)　打开浏览器下载 https://www.yundoutech.cn/app/link。\n　　　　※关于AIOA安装使用有任何问题，请联系邮件室，分机：35868。　\n</item>
-        <item>员工可以到1楼服务中心办理临时门禁卡, 办理同时需要项目陪同员工的签字确认。\n（Renesas项目的同事需要到1楼大堂的保安处办理）</item>
+        <item>●　如果您在24号楼，请到24号楼5层文具室领取申请的文具（分机：35854）；\n●　如果您在15或17号楼，请到前台领取文具；\n●　3，6，7号楼的邮件和文具服务没有变化；\n●　29号楼文具领用可以下载并安装AIOA进行文具领用。\n\n如何安装AIOA?\n\n扫描下面的二维码（不要使用微信扫描），或者打开浏览器下载 https://www.yundoutech.cn/app/link\n今天您将收到AIOA用户名和密码，\n发件人：\nDalian.mail@accenture.com\n关于AIOA安装使用有任何问题，\n请联系邮件室，分机：35868。\n</item>
+        <item>员工可以到1楼服务中心办理临时门禁卡，办理同时需要项目陪同员工的签字确认。\n（Renesas项目的同事需要到1楼大堂的保安处办理）</item>
         <item>a)　员工发送邮件到 cn.facilities@accenture.com 提出补卡或更换新卡申请。 \nb)　收到回复邮件“Your service request is resolved”通知后到1楼服务中心领取新门禁卡。\n　　（100元补卡费用将在员工当月工资中扣除）</item>
         <item>a)　员工将个人电子照片发送到 cn.facilities@accenture.com 并提出照片卡申请。\nb)　收到回复邮件“Your service request is resolved”通知后到1楼服务中心领取照片卡。</item>
         <item>员工到1楼服务中心填写相应表格后方可领取。\n※必须本人领取</item>
@@ -27,7 +27,7 @@
         <item>关于行政的服务请求和问题请发邮件到 cn.facilities@accenture.com ，我们会尽快给您解决并回复。</item>
     </string-array>
     <string-array name="rlzy_title">
-        <item>如何取得在职证明和薪资证明以及休假证明(vacation letter)？</item>
+        <item>如何取得在职证明和薪资证明以及休假证明（vacation letter）？</item>
         <item>人力资源政策以及流程，我该向哪里咨询？</item>
         <item>入、离职相关的社保、公积金、档案如何办理？</item>
         <item>平安保险上门服务时间？</item>
@@ -54,7 +54,7 @@
         <item>得到CSDL的批准后，相应的PA会联系AEE HR帮助员工处理流程\n※请员工在离职前一周左右，注意查收由AEE HR发送的指南邮件，按照邮件中的说明办理即可。</item>
         <item>●　若想为父母、配偶、子女加保，请联系 chinapayroll.support@accenture.com ；\n●　若想咨询费用报销相关的政策，请联系平安保险的毕嘉敏 bijiamin001@pingan.com.cn \n　　联系电话： 0411-39840839   手机：18640952877</item>
         <item>●　薪资需要联络payroll team\n●　可通过座机拨打分机号：57701  外线：82417701\n　　邮箱： APSSC.HR.SUPPORT@accenture.com  </item>
-        <item>●　员工仍在 PIP (performance improvement plan) 过程中\n●　员工在现有职位服务未满12个月（如果项目解散或者公司特殊需求除外）</item>
+        <item>●　员工仍在 PIP（performance improvement plan）过程中\n●　员工在现有职位服务未满12个月（如果项目解散或者公司特殊需求除外）</item>
         <item>a)　在公司网站提出申请https://careersmarketplace.accenture.com/#/\nb)　简历通过HR筛选后，员工需与项目领导沟通转组意向\nc)　HR协调安排与新项目组的面试\nd)　面试通过后HR与双方项目组协调最早转组时间\n　　※跨国调转须拿到转出国DTE lead审批</item>
         <item>员工卡相关问题，请联系Facilities team进行询问，可发送邮件至 cn.facilities@accenture.com</item>
         <item>●　recruiter会定期发布职位信息，根据信息中提供的相应职位号将简历上传至ERP系统，链接：https://employeereferralprogram.accenture.com/#/index\n●　如没有职位号，可以联系相应的recruiter索要职位号。\n推荐奖金设置：</item>
@@ -71,18 +71,40 @@
         <item>员工如需申请项目share folder权限怎么办？</item>
         <item>员工如何申请电话长途密码（IDD Code）？</item>
         <item>如何开通USB？</item>
+        <item>无法收发邮件怎么办？</item>
+        <item>如何处理security compliant issue？</item>
+        <item>如何注册手机邮箱？</item>
+        <item>手机邮箱邮件无法更新怎么办？</item>
+        <item>IT services websites</item>
+        <item>如何申请share point，并如何管理权限？</item>
+        <item>如何申请shared mailbox？</item>
+        <item>Mail group 和shared mailbox的区别：</item>
+        <item>如何申请Contractor ID？</item>
+        <item>如果硬盘满了怎么办？</item>
+        <item>其他</item>
     </string-array>
     <string-array name="itzc_content">
-        <item>●　重置密码：\n　　1)　如果用户密码没有过期（每75天更换一次密码）：\n　　　a)　如果用户连接公司网络的情况下，可以通过“Control+Alt+Delete”，选择change password 更改密码; 或者访问 https://directory.accenture.com/ChangePassword/Default2.aspx 更改密码。\n　　　　　（密码规则：大、小写字母、特殊字符、数字至少包含3种，不低于8位字符）\n　　　b)　如果用户出差无法连接公司网络，可以通过访问 https://directory.accenture.com/ChangePassword/Default2.aspx 更改密码。\n　　2)　如果用户密码已经过期，需要更改密码：\n　　　□　自助服务\n　　　　　访问 https://mypasswordreset.accenture.com/default.aspx 重置个人密码。\n　　　□　请求IW密码重置服务\n　　　　a)　如果用户本人在办公室的情况：\n　　　　　○　密码重置和账户解锁服务只能由以下用户提出申请：用户本人/HR PA/项目指定联系人/Accenture Leadership/career level 6-9；\n　　　　　○　如果经理或career level 9以上的员工可以提供担保，用户需要将电话递交给担保人进行身份验证；\n　　　　　○　IW工程师将通过职务级别/EID/Portal注册手机号，来验证担保人身份。成功后，会将新密码告知用户本人。\n　　　　b)　如果用户本人不在办公室的情况：\n　　　　　○　IW工程师将检查用户手机号码与Portal注册号码是否匹配，并且进行以下任一项验证步骤：\n　　　　　　√　员工号码(SAP Number)\n　　　　　　√　入职日期（仅年月信息）\n　　　　　○　验证成功后，会将新密码告知用户本人。\n●　如何避免密码被锁：\n　　1)　建议用户在进行密码更改操作之前，关闭outlook，Skype，IE等程序，以防进行密码更改操作之后，新密码无法同步。\n　　2)　建议用户使用时，不要选择保存密码。\n　　3)　如果出现被锁情况，建议Control Panel\User Accounts\Credential Manager，清除如下图中的密码保存记录，确保界面下方的三个选项都是No的状态。\n</item>
-        <item>●　使用会议室网络：\n　　可以通过拨打57777 或者https://accentureinternal.service-now.com/isa/ 创建case，Workstation team将会检查客户电脑(如病毒和P2P软件)\n●　使用项目网络：\n　　需要项目经理批准，然后发信给IT security负责人(yan.a.liu)去进一步follow。\n●　使用会议室Wi-Fi 网络：\n　　项目可以通过https://myexpresslane.accenture.com/ 创建request。\n　　如果项目经理批准，IT 网络组会帮助用户创建Wi-Fi-guest账号的密码。</item>
-        <item>●　用户如需申请 Lync IM或者Lync Call的功能：\n　　通过https://myexpresslane.accenture.com 创建request\n　　项目经理批准后，IT team 将会进行后续操作。\n●　用户如需申请Lync Video 或者share desktop功能：\n　　通过https://myexpresslane.accenture.com 创建request\n　　需要Senior Manager经理批准和有效的wbs code，之后IT team会帮助添加权限。\n　　(费用：Video为4$/month, Share desktop 为2$/month)\n●　用户如需申请Lync PE功能：\n　　填写下表，将邮件发送给James.jianwei.Li；费用为：9$/month。</item>
-        <item>a)　通过https://federation-sts.accenture.com/vip/contacts, 登记或者更新电话信息，格式：+86  手机号（+86 后面有空格），更新后需要一段时间才能将信息同步到网站。\nb)　如果确认电话信息已保存并成功更新到上述网站，请访问https://go.accenture.com/symantecvip_portal ，验证手机收到的security code之后，选择注册device去完成注册。</item>
+        <item>●　重置密码：\n　　1)　如果用户密码没有过期（每75天更换一次密码）：\n　　　a)　如果用户连接公司网络的情况下，可以通过“Control+Alt+Delete”，选择change password 更改密码; 或者访问 https://directory.accenture.com/ChangePassword/Default2.aspx 更改密码。\n　　　　　（密码规则：大、小写字母、特殊字符、数字至少包含3种，不低于8位字符）\n　　　b)　如果用户出差无法连接公司网络，可以通过访问 https://directory.accenture.com/ChangePassword/Default2.aspx 更改密码。\n　　2)　如果用户密码已经过期，需要更改密码：\n　　　□　自助服务\n　　　　　访问 https://mypasswordreset.accenture.com/default.aspx 重置个人密码。\n　　　□　请求IW密码重置服务\n　　　　a)　如果用户本人在办公室的情况：\n　　　　　○　密码重置和账户解锁服务只能由以下用户提出申请：用户本人/HR PA/项目指定联系人/Accenture Leadership/career level 6-9；\n　　　　　○　如果经理或career level 9以上的员工可以提供担保，用户需要将电话递交给担保人进行身份验证；\n　　　　　○　IW工程师将通过职务级别/EID/Portal注册手机号，来验证担保人身份。成功后，会将新密码告知用户本人。\n　　　　b)　如果用户本人不在办公室的情况：\n　　　　　○　IW工程师将检查用户手机号码与Portal注册号码是否匹配，并且进行以下任一项验证步骤：\n　　　　　　√　员工号码（SAP Number）\n　　　　　　√　入职日期（仅年月信息）\n　　　　　○　验证成功后，会将新密码告知用户本人。\n●　如何避免密码被锁：\n　　1)　建议用户在进行密码更改操作之前，关闭outlook，Skype，IE等程序，以防进行密码更改操作之后，新密码无法同步。\n　　2)　建议用户使用时，不要选择保存密码。\n　　3)　如果出现被锁情况，建议Control Panel\User Accounts\Credential Manager，清除如下图中的密码保存记录，确保界面下方的三个选项都是No的状态。\n</item>
+        <item>●　使用会议室网络：\n　　可以通过拨打57777 或者https://accentureinternal.service-now.com/isa/ 创建case，Workstation team将会检查客户电脑（如病毒和P2P软件）\n●　使用项目网络：\n　　需要项目经理批准，然后发信给IT security负责人（yan.a.liu）去进一步follow。\n●　使用会议室Wi-Fi 网络：\n　　项目可以通过https://myexpresslane.accenture.com/ 创建request。\n　　如果项目经理批准，IT 网络组会帮助用户创建Wi-Fi-guest账号的密码。</item>
+        <item>●　用户如需申请 Lync IM或者Lync Call的功能：\n　　通过https://myexpresslane.accenture.com 创建request\n　　项目经理批准后，IT team 将会进行后续操作。\n●　用户如需申请Lync Video 或者share desktop功能：\n　　通过https://myexpresslane.accenture.com 创建request\n　　需要Senior Manager经理批准和有效的wbs code，之后IT team会帮助添加权限。\n　　（费用：Video为4$/month，Share desktop 为2$/month）\n●　用户如需申请Lync PE功能：\n　　填写下表，将邮件发送给James.jianwei.Li；费用为：9$/month。</item>
+        <item>a)　通过https://federation-sts.accenture.com/vip/contacts，登记或者更新电话信息，格式：+86  手机号（+86 后面有空格），更新后需要一段时间才能将信息同步到网站。\nb)　如果确认电话信息已保存并成功更新到上述网站，请访问https://go.accenture.com/symantecvip_portal ，验证手机收到的security code之后，选择注册device去完成注册。</item>
         <item>●　如需更改座位端口：\n　　用户可通过拨打57777 或者https://accentureinternal.service-now.com/isa/ 创建case 提供端口号和目标项目名字，之后IT team会进行后续操作。\n●　如需更改meeting room 端口\n　　用户可以通过拨打 57777 或者https://accentureinternal.service-now.com/isa/ 创建case 提供端口号和目标项目名字以及使用时间，IT team确认信息后会进行后续操作。</item>
         <item>●　用户如需开通笔记本Wi-Fi功能：\n　　通过https://myexpresslane.accenture.com 创建request\n　　项目经理批准之后，IT team会进行操作。\n●　用户如需申请 Shared meeting room Wi-Fi service（Wi-Fi-DC-Data）：\n　1)　Level 7 or above 默认即有权限，无需再次申请。\n　2)　低于Level 7的员工，可通过 https://myexpresslane.accenture.com 创建request，需要项目经理批准和有效的wbs code，之后IT Team会添加权限，费用为5$/month/person。\n●　如需为客户申请Wi-Fi：\n　　通过https://myexpresslane.accenture.com 创建request给network team，项目经理批准之后，IT 网络组会创建Wi-Fi-guest账号的密码。\nNotes：WIFI Service is now available in the meeting rooms of following areas</item>
-        <item>非正式员工或者实习生只有网页版权限。 如需申请客户端版权限，可以通过https://accentureinternal.service-now.com/dsrm/ 提交申请， 需要有效的wbs code和项目经理或者以上的批准。</item>
-        <item>通过https://myexpresslane.accenture.com 创建request给IT Sever team，提供要申请的share folder路径和要访问者的Enterprise ID。 若项目经理在网站批准，IT服务器组将会follow此request，并帮助用户添加相应的权限。</item>
-        <item>通过https://myexpresslane.accenture.com 创建request给collaboration组。 若项目经理在网站批准，IT 会帮助用户创建IDD Code。</item>
-        <item>低于MD level的员工，USB的默认权限为只读；MD Level的USB默认权限为不加密读和加密写的权限。 如果用户要申请USB读写加密权限： 发信到CDP（clientdataprotection@accenture.com） 得到CDP批准之后，通过https://myexpresslane.accenture.com log a request 到workstation，随后IT workstation会帮助用户开通权限。 如果用户要申请USB临时权限（低于7天）： CDC：需要得到china.swf.security team批准，通过https://myexpresslane.accenture.com 创建request到workstation。 BPO：需要得到Kevin. Wang的批准，通过https://myexpresslane.accenture.com 创建request到workstation。 AEE：需要得到Zhihong.zhao的批准，通过https://myexpresslane.accenture.com 创建request到workstation。</item>
+        <item>a)　非正式员工或者实习生只有网页版权限。\nb)　如需申请客户端版权限，可以通过 https://accentureinternal.service-now.com/dsrm/ 提交申请， 需要有效的wbs code和项目经理或者以上的批准。</item>
+        <item>a)　通过https://myexpresslane.accenture.com 创建request给IT Sever team，提供要申请的share folder路径和要访问者的Enterprise ID。\nb)　若项目经理在网站批准，IT服务器组将会follow此request，并帮助用户添加相应的权限。</item>
+        <item>a)　通过https://myexpresslane.accenture.com 创建request给collaboration组。\nb)　若项目经理在网站批准，IT 会帮助用户创建IDD Code。</item>
+        <item>低于MD level的员工，USB的默认权限为只读；MD Level的USB默认权限为不加密读和加密写的权限。\n●　如果用户要申请USB读写加密权限：\n　a)　发信到CDP（clientdataprotection@accenture.com）\n　b)　得到CDP批准之后，通过 https://myexpresslane.accenture.com log a request 到workstation，随后IT workstation会帮助用户开通权限。\n●　如果用户要申请USB临时权限（低于7天）：\n　○　CDC：需要得到china.swf.security team批准，通过 https://myexpresslane.accenture.com 创建request到workstation。\n　○　BPO：需要得到Kevin. Wang的批准，通过 https://myexpresslane.accenture.com 创建request到workstation。\n　○　AEE：需要得到Zhihong.zhao的批准，通过 https://myexpresslane.accenture.com 创建request到workstation。</item>
+        <item>●　如果是群发性都不好用，请用户先使用网页版，等待IT后端修复。\n●　如果是个人不好用，需要用户考虑以下几点：\n　1)　检查账号是否被锁：\n　　　如果反复出现密码弹窗，可能是账号被锁导致，用户可以去登陆portal查看能否成功登陆来进行测试。\n　2)　建议用户登陆网页版邮箱 https://email.accenture.com，来查看接收/发送情况。由于客户端无法收信，大多数情况可能是由于网络或者邮件拥堵导致，如果网页版收发正常，建议用户暂时先使用网页版代替，等待客户端版自行恢复。\n　3)　如果用户无法使用网页版，可以尝试按照下面方法尝试进行修复操作：\n　　a)　退出 Lync 和 Outlook， 打开开始菜单里面的Control Panel，在搜索框里，搜索mail。\n　　b)　在弹出的窗口中，选择E-mail Accounts；选中EID，然后点击repair。\n　　c)　选择 “Manual Setup or additional server types”，点击下一步。\n　　d)　把服务器地址改为 “outlook.048d.mgd.msft.net”，然后点击 “Check Name”，点击finish，完成修复。\n　　e)　如果上述方法都无法帮助用户解决问题，建议用户拨打57777来寻求帮助。</item>
+        <item>如果用户收到标题含有 Security Compliance标题的邮件，建议用户采取以下操作：\n1)　用户访问 https://support.accenture.com/technology/MyComputer/Pages/myEquipment1.aspx?rd=2&amp;navigationID=63&amp;parentNodeID=62&amp;Country=63 或者 https://support.accenture.com/procedures/TechnologySupportKnowledgebase/Pages/AdminAssetLookup1.aspx?navigationID=4&amp;parentNodeID=2 \n2)　网站打开后，会显示此用户名下的资产，如果出现标红色的选项，证明此资产存在security non-compliance问题。\n3)　用户需要对这些红色叹号选项，采取行动，如果用户不清楚这些选项后面代表的含义，建议用户拨打57777来咨询并解决问题，比较常见选项如下：\n　○　Polling—代表的是机器需要运行UMPC_myCompliance.exe（资产管理软件，需要每30天运行一次）\n　○　Hard Drive Encryption—代表机器的硬盘加密软件存在问题，可能是没有安装或者加密的key没有上传。\n　○　Patching—代表更新补丁，进行windows update。\n　○　Antivirus—代表杀毒软件存在问题，或者没装，或者版本过低，或者病毒库需要更新。</item>
+        <item>●　IOS\n　1)　注册说明网址：https://support.accenture.com/applications/MDM/Pages/AppleEnrollment.aspx \n　2)　注册方法：\n　　a)　如果在手机已经添加过公司的邮箱账号，需要先删除\n　　b)　打开设置—Touch ID&amp;Passcode—Change passcode—passcode options—custom numeric code--设置8位passcode\n　　c)　打开app store—搜索 air watch—下载并安装\n　　d)　打开air watch app，在弹出的窗口里面选择authentication method，然后出入邮箱地址（e.g. john.doe@accenture.com），然后点击继续。\n　　e)　输入Enterprise ID 和密码，选择接受agreement，点击继续\n　　f)　当弹出enable device management，点击rediect&amp;enable—install—输入之前设置的8位passcode—done\n　　g)　点击install来确认installation--出现warning的界面选择install—trust—done\n　　h)　在几分钟之后，你手机界面将会恢复到air watch app，并且显示注册的成功状态，点击继续，如果弹窗请点击done， 点击OK来确认允许通知。点击home按键。\n　　i)　等待 my device和app catalog出现在手机屏幕主界面，这意味着你的设备已经通过complianced检查和邮件已经准备好同步（这个过程可能需要15分钟，不要尝试通过服务器地址手动配置邮箱）。在应用程序app出现后，打开mail app，输入邮箱密码，你的邮件，联系人，日历都将会同步过来，如果没有看见邮件不要着急，因为需要一段时间才能同步过来。\n●　Android\n　1)　注册说明网址：https://support.accenture.com/applications/MDM/Pages/AppleEnrollment.aspx \n　2)　注册方法：\n　　a)　在注册之前，建议备份所有的手机个人数据，确保手机连接充电器，或者有至少80%的电量。下面的注册说明，是基于三星S4，安卓系统4.4.2进行测试的，所以注册依赖于你的设备，系统和设置；需要你的google play ID和password去下载MDM程序，并且需要保证网络连通性。\n　　b)　不同的设备，有不同的注册方法，建议用户参照下图，选择适合自己情况的说明。</item>
+        <item>1)　最长可以同步30天之内的邮件，如果超过30天，则无法同步。\n2)　如果邮件不更新，打开air watch，iOS系统（点击air watch右上角的重新注册设备）、Android（点击air watch右上角的注销设备），然后删除，重新进行配置。</item>
+        <item>1)　网址：https://accentureinternal.service-now.com/dsrm/ \n2)　用户打开网址后，通过搜索栏，输入要申请的相应关键字，点击搜索即可出现相应的选项。\n3)　用户填写需要的信息，提交request申请即可。</item>
+        <item>●　如何申请\n　a)　申请网址：https://accentureinternal.service-now.com/dsrm/create_request.do?sys_id=0813b9900f6d1600e65a4b9ce1050eeb \n　b)　根据实际情况填写应信息申请即可，需要wbs code，并需要在申请时设置SharePoint管理者和次管理者。\n●　如何管理权限？\n　1)　管理share point 权限\n　　a)　打开站点右上方的齿轮图标，选择Site Settings\n　　b)　在打开的页面中，选择Site Permissions\n　2)　授予权限\n　　　在打开的页面中，你可以选择直接授予权限，也可以先创建你需要的SharePoint组，用组来管理权限。\n　　a)　点击Create Group。\n　　b)　建立小组—填写组名、组所有人、谁可以看到成员列表等信息，然后用户可以通过管理这个组的方式来管理这个站点的相应文档库/列表等权限。\n　　c)　点击Share，填写需要加权限的人，勾选邮件通知，然后点击share完成即可。</item>
+        <item>如果用户要申请shared mailbox，请按照下面步骤操作：\na)　访问 https://directory.accenture.com/WebAdmin/，建立一个mail group， 需要24个工作小时生效。\nb)　访问 https://accentureinternal.service-now.com/dsrm/，通过搜索框搜索shared mailbox，然后点击Shared E-mailbox，在出现的表格里面填写要求的信息（包含需要填写步骤a创建的mail group ），并需要24个工作小时生效。\nc)　一旦申请成功，用户可以把shared mailbox账号填加到邮箱里面，并使用它进行收发邮件等操作。</item>
+        <item>●　mail group只能用来收邮件，不能作为账号填加到邮箱里面；\n●　Shared mailbox 是既能收也能发，并且可以作为账号添加到邮箱里面。\n　　（Shared mailbox里面的成员，是通过申请mailbox时添加的mail group进行编辑的。）</item>
+        <item>●　如果是帮助实习生或者合同工申请临时EID：\n　　通过  https://contractors.accenture.com ，提交一个request来申请。\n●　如果是帮助客户来申请临时EID：\n　　通过 https://myaccessnonaccenture.accenture.com/  ，提交一个request来申请。\n●　详细相关申请介绍，请访问下面网址：\n　　 https://myaccessnonaccenture.accenture.com/nonaccenture/nonAccentureHome.do;jsessionid=380636CD8E819367ECEC46F70F247603?method=init_home</item>
+        <item>●　删除机器上的temp文件\n　　Win+R”调用出运行窗口，输入temp，然后删除里面的文件。\n●　删除SCCM缓存文件\n　　打开C:\Windows\ccmcache，删除里面的sccm缓存文件（此folder需要有管理员权限才能打开）\n●　删除个人缓存文件\n　　C盘上面单击右键—disk cleanup—勾选占用空间的文件，然后点击OK，在弹窗里面选择delete files\n●　关闭系统保护\n　　Computer右键选择属性—选择System protection—configure—turn off system protection\n●　建议用户将一些数据转移到share folder里面\n</item>
+        <item>关于IT的服务请求和问题请拨打57777热线，我们会尽快给您解决并回复。</item>
     </string-array>
     <string-array name="cwzx_title">
         <item>员工忘带门禁卡了怎么办？</item>
@@ -96,7 +118,7 @@
         <item>员工/访客如何寄存行李/物品？</item>
     </string-array>
     <string-array name="cwzx_content">
-        <item>员工可以到1楼服务中心办理临时门禁卡, 办理同时需要项目陪同员工的签字确认。 （Renesas项目的同事需要到1楼大堂的保安处办理）</item>
+        <item>员工可以到1楼服务中心办理临时门禁卡，办理同时需要项目陪同员工的签字确认。 （Renesas项目的同事需要到1楼大堂的保安处办理）</item>
         <item>员工发送邮件到 cn.facilities@accenture.com提出补卡或更换新卡申请。 收到回复邮件”Your service request is resolved”通知后到1楼服务中心领取新门禁卡。 （100元补卡费用将在员工当月工资中扣除）</item>
         <item>员工将个人电子照片发送到cn.facilities@accenture.com并提出照片卡申请。 收到回复邮件”Your service request is resolved”通知后到1楼服务中心领取照片卡。</item>
         <item>员工到1楼服务中心填写相应表格后方可领取。 ※必须本人领取</item>

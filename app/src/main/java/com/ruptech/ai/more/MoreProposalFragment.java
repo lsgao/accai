@@ -23,6 +23,8 @@ public class MoreProposalFragment extends Fragment {
     TextView toolbar;
     @InjectView(R.id.return_icon_more_proposal)
     ImageView returnIcon;
+    @InjectView(R.id.return_text_more_proposal)
+    TextView returnText;
 
     public static MoreProposalFragment newInstance() {
         MoreProposalFragment fragment = new MoreProposalFragment();
@@ -45,6 +47,13 @@ public class MoreProposalFragment extends Fragment {
         toolbar.setText(getString(R.string.proposal_title));
 
         returnIcon.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToMoreFirstFragment();
+            }
+        });
+        returnText.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {

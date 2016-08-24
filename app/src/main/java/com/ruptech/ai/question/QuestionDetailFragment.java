@@ -1,12 +1,14 @@
 package com.ruptech.ai.question;
 
+import android.content.Context;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.LocalBroadcastManager;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,14 +16,18 @@ import android.view.ViewGroup;
 import com.ruptech.ai.App;
 import com.ruptech.ai.R;
 import com.ruptech.ai.MainActivity;
+import com.ruptech.ai.main.MeFragment;
+import com.ruptech.ai.main.QuestionFragment;
 import com.ruptech.ai.utils.Utils;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
@@ -44,6 +50,8 @@ public class QuestionDetailFragment extends Fragment {
     TextView content;
     @InjectView(R.id.return_icon_question_detail)
     ImageView returnIcon;
+    @InjectView(R.id.return_text_question_detail)
+    TextView returnText;
 
     @InjectView(R.id.button_praise_question_detail)
     LinearLayout button_praise;
@@ -75,6 +83,26 @@ public class QuestionDetailFragment extends Fragment {
     TableLayout table_itzc_3;
     @InjectView(R.id.table_itzc_6)
     TableLayout table_itzc_6;
+    @InjectView(R.id.table_itzc_13)
+    TableLayout table_itzc_13;
+    @InjectView(R.id.text_itzc_13_cell11)
+    TextView text_itzc_13_cell11;
+    @InjectView(R.id.text_itzc_13_cell12)
+    TextView text_itzc_13_cell12;
+    @InjectView(R.id.text_itzc_13_cell13)
+    TextView text_itzc_13_cell13;
+    @InjectView(R.id.text_itzc_13_cell21)
+    TextView text_itzc_13_cell21;
+    @InjectView(R.id.text_itzc_13_cell22)
+    TextView text_itzc_13_cell22;
+    @InjectView(R.id.text_itzc_13_cell23)
+    TextView text_itzc_13_cell23;
+    @InjectView(R.id.text_itzc_13_cell31)
+    TextView text_itzc_13_cell31;
+    @InjectView(R.id.text_itzc_13_cell32)
+    TextView text_itzc_13_cell32;
+    @InjectView(R.id.text_itzc_13_cell33)
+    TextView text_itzc_13_cell33;
 
     public static QuestionDetailFragment newInstance(String type, String index) {
         QuestionDetailFragment fragment = new QuestionDetailFragment();
@@ -89,6 +117,7 @@ public class QuestionDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        QuestionFragment.currentMainFragment = QuestionFragment.KIND_DETAIL;
         type = getArguments().getString(MainActivity.EXTRA_TYPE);
         index = new Integer(getArguments().getString(MainActivity.EXTRA_INDEX)).intValue();
     }
@@ -149,6 +178,13 @@ public class QuestionDetailFragment extends Fragment {
                 moveToQuestionListFragment();
             }
         });
+        returnText.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionListFragment();
+            }
+        });
 
         if (isPraise(type, index)) {
             icon_praise.setImageResource(R.drawable.icon_praise_light);
@@ -182,21 +218,21 @@ public class QuestionDetailFragment extends Fragment {
         layout_relation_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                displayQuestion(0);
+                moveToQuestionDetailFragment(0);
             }
         });
 
         layout_relation_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                displayQuestion(1);
+                moveToQuestionDetailFragment(1);
             }
         });
 
         layout_relation_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                displayQuestion(2);
+                moveToQuestionDetailFragment(2);
             }
         });
 
@@ -227,10 +263,53 @@ public class QuestionDetailFragment extends Fragment {
             table_itzc_3.setVisibility(View.GONE);
         }
 
-        if(MainActivity.TYPE_ITZC.equals(type) && 5 == index) {
+        if (MainActivity.TYPE_ITZC.equals(type) && 5 == index) {
             table_itzc_6.setVisibility(View.VISIBLE);
         } else {
             table_itzc_6.setVisibility(View.GONE);
+        }
+
+        if (MainActivity.TYPE_ITZC.equals(type) && 12 == index) {
+            table_itzc_13.setVisibility(View.VISIBLE);
+            String text;
+
+            text = text_itzc_13_cell11.getText().toString();
+            text_itzc_13_cell11.setText(Html.fromHtml(text));
+            text_itzc_13_cell11.setMovementMethod(LinkMovementMethod.getInstance());
+
+            text = text_itzc_13_cell12.getText().toString();
+            text_itzc_13_cell12.setText(Html.fromHtml(text));
+            text_itzc_13_cell12.setMovementMethod(LinkMovementMethod.getInstance());
+
+            text = text_itzc_13_cell13.getText().toString();
+            text_itzc_13_cell13.setText(Html.fromHtml(text));
+            text_itzc_13_cell13.setMovementMethod(LinkMovementMethod.getInstance());
+
+            text = text_itzc_13_cell21.getText().toString();
+            text_itzc_13_cell21.setText(Html.fromHtml(text));
+            text_itzc_13_cell21.setMovementMethod(LinkMovementMethod.getInstance());
+
+            text = text_itzc_13_cell22.getText().toString();
+            text_itzc_13_cell22.setText(Html.fromHtml(text));
+            text_itzc_13_cell22.setMovementMethod(LinkMovementMethod.getInstance());
+
+            text = text_itzc_13_cell23.getText().toString();
+            text_itzc_13_cell23.setText(Html.fromHtml(text));
+            text_itzc_13_cell23.setMovementMethod(LinkMovementMethod.getInstance());
+
+            text = text_itzc_13_cell31.getText().toString();
+            text_itzc_13_cell31.setText(Html.fromHtml(text));
+            text_itzc_13_cell31.setMovementMethod(LinkMovementMethod.getInstance());
+
+            text = text_itzc_13_cell32.getText().toString();
+            text_itzc_13_cell32.setText(Html.fromHtml(text));
+            text_itzc_13_cell32.setMovementMethod(LinkMovementMethod.getInstance());
+
+            text = text_itzc_13_cell33.getText().toString();
+            text_itzc_13_cell33.setText(Html.fromHtml(text));
+            text_itzc_13_cell33.setMovementMethod(LinkMovementMethod.getInstance());
+        } else {
+            table_itzc_13.setVisibility(View.GONE);
         }
 
         return rootView;
@@ -255,6 +334,9 @@ public class QuestionDetailFragment extends Fragment {
             Properties properties = loadProPerties();
             saveProPerties(properties, pro_name, new String("1"));
             icon_favorite.setImageResource(R.drawable.icon_favorite_light);
+        }
+        if(MeFragment.KIND_FAVORITE.equals(MeFragment.currentMainFragment)) {
+            sendBroadcast(type);
         }
     }
 
@@ -327,15 +409,16 @@ public class QuestionDetailFragment extends Fragment {
     private void displayQuestion(int index) {
         moveToQuestionLoadingFragment(index);
     }
-//    private void moveToQuestionDetailFragment(int index) {
-//        MainActivity mainActivity = (MainActivity) this.getActivity();
-//        FragmentTransaction ft = mainActivity.getSupportFragmentManager().beginTransaction();
-//
-//        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
-//        ft.replace(R.id.question_main_fragment, target);
-//        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-//        ft.commit();
-//    }
+
+    private void moveToQuestionDetailFragment(int index) {
+        MainActivity mainActivity = (MainActivity) this.getActivity();
+        FragmentTransaction ft = mainActivity.getSupportFragmentManager().beginTransaction();
+
+        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
+        ft.replace(R.id.question_main_fragment, target);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.commit();
+    }
 
     private void moveToQuestionLoadingFragment(int index) {
         MainActivity mainActivity = (MainActivity) this.getActivity();
@@ -345,6 +428,12 @@ public class QuestionDetailFragment extends Fragment {
         ft.replace(R.id.question_main_fragment, target);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
+    }
+
+    private void sendBroadcast(String type) {
+        Intent intent = new Intent(MainActivity.BROADCAST_FAVORITE);
+        intent.putExtra(MainActivity.EXTRA_TYPE, type);
+        LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
     }
 }
 

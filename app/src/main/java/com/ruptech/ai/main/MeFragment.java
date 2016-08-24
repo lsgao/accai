@@ -21,6 +21,8 @@ public class MeFragment extends Fragment {
     public static final String KIND_FIRST = "first";
     public static final String KIND_FAVORITE = "favorite";
 
+    public static String currentMainFragment = KIND_FIRST;
+
     private String kind;
 
     public static MeFragment newInstance(String kind) {

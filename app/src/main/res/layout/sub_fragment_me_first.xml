@@ -15,126 +15,125 @@
             android:id="@+id/toolbar_me"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:gravity="center_vertical|center_horizontal"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/pager_title_color"
             android:layout_alignParentLeft="true"
-            android:text="@string/tab_title_me" />
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/tab_title_me"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/pager_title_color" />
+
         <TextView
             android:id="@+id/logout_icon_me_first"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:gravity="center_vertical|center_horizontal"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/logout"
-            android:textColor="@color/pager_title_color"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="5dp" />
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/logout"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/pager_title_color" />
     </RelativeLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/photo_bg"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/top_me_first"
         android:background="@drawable/people_bg"
-        android:id="@+id/photo_bg"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/imageView_me_first_photo"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/imageView_me_first_photo"
-            android:src="@drawable/default_photo"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/default_photo" />
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_marginLeft="20dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView_me_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/textView_me_name"
                 android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Accenture Operations" />
+                android:text="Accenture Operations"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/photo_bg"
+        android:layout_centerHorizontal="true"
         android:background="@color/primary"
-        android:layout_marginTop="10dp">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/item_me_first_photo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:background="@drawable/layout_border"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:background="@drawable/layout_border"
-            android:id="@+id/item_me_first_photo">
+            android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/imageView_me_first_photo_logo"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/imageView_me_first_photo_logo"
-                android:contentDescription="@string/me_photo"
-                android:src="@drawable/me_profile"
+                android:layout_margin="5dp"
                 android:clickable="true"
-                android:layout_margin="5dp" />
+                android:contentDescription="@string/me_photo"
+                android:src="@drawable/me_profile" />
 
             <TextView
+                android:id="@+id/textView_me_first_photo_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/me_photo"
-                android:id="@+id/textView_me_first_photo_title"
                 android:clickable="true"
-                android:textColor="@color/font_color"
-                android:layout_marginLeft="5dp"/>
+                android:text="@string/me_photo"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/font_color" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/item_me_first_favorite"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
             android:background="@drawable/layout_border"
+            android:clickable="true"
             android:gravity="center_vertical"
-            android:id="@+id/item_me_first_favorite">
+            android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/imageView_me_first_favorite_logo"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/imageView_me_first_favorite_logo"
-                android:contentDescription="@string/me_favorite"
-                android:src="@drawable/me_favorite"
+                android:layout_margin="5dp"
                 android:clickable="true"
-                android:layout_margin="5dp" />
+                android:contentDescription="@string/me_favorite"
+                android:src="@drawable/me_favorite" />
 
             <TextView
+                android:id="@+id/textView_me_first_favorite_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/me_favorite"
-                android:id="@+id/textView_me_first_favorite_title"
                 android:clickable="true"
+                android:text="@string/me_favorite"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/font_color" />
         </LinearLayout>
 

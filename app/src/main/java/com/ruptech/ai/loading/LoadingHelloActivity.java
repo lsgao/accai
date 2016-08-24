@@ -52,7 +52,7 @@ public class LoadingHelloActivity extends Activity {
                     mHandler.removeCallbacks(timeOutTask);
                 }
 
-                Toast.makeText(LoadingHelloActivity.this, "timeout", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoadingHelloActivity.this, getString(R.string.timeout), Toast.LENGTH_LONG).show();
                 LoadingHelloActivity.this.finish();
 
             } else if (msg.what == MSG_INIT_OK) {

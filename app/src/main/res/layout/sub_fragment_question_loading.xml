@@ -20,6 +20,16 @@
             android:src="@drawable/icon_return" />
 
         <TextView
+            android:id="@+id/return_text_question_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/return_icon_question_loading"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/back"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/pager_title_color" />
+
+        <TextView
             android:id="@+id/toolbar_question_loading"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
@@ -53,8 +63,9 @@
             android:layout_below="@+id/gif_waiting"
             android:gravity="center_horizontal"
             android:text="@string/loading"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/list_title_color" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/list_title_color"
+            android:layout_marginTop="15dp" />
 
 
     </LinearLayout>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -30,6 +28,16 @@
                     android:src="@drawable/icon_return" />
 
                 <TextView
+                    android:id="@+id/return_text_me_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/return_icon_me_favorite"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/back"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/pager_title_color" />
+
+                <TextView
                     android:id="@+id/toolbar_me_favorite"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
@@ -40,102 +48,147 @@
             </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/layout_xzfw_me_favorite"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_below="@id/top_me_favorite"
-                android:orientation="vertical"
-                android:id="@+id/layout_xzfw_me_favorite"
-                android:background="@drawable/layout_border">
+                android:background="@drawable/layout_border"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/title_xzfw_me_favorite"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/layout_border"
                     android:gravity="center_vertical"
                     android:text="@string/title_item_xzfw_favorite"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/list_title_color"
-                    android:background="@drawable/layout_border" />
+                    android:textColor="@color/list_title_color" />
+
+
+                <TextView
+                    android:id="@+id/text_no_data_xzfw_me_favorite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/layout_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/no_favorite_data"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/font_color" />
 
                 <ListView
+                    android:id="@+id/listView_xzfw_me_favorite"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:id="@+id/listView_xzfw_me_favorite"
                     android:background="@drawable/layout_border" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_rlzy_me_favorite"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_below="@id/layout_xzfw_me_favorite"
-                android:orientation="vertical"
-                android:id="@+id/layout_rlzy_me_favorite"
-                android:background="@drawable/layout_border">
+                android:background="@drawable/layout_border"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/title_rlzy_me_favorite"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/layout_border"
                     android:gravity="center_vertical"
                     android:text="@string/title_item_rlzy_favorite"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/list_title_color"
-                    android:background="@drawable/layout_border" />
+                    android:textColor="@color/list_title_color" />
+
+                <TextView
+                    android:id="@+id/text_no_data_rlzy_me_favorite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/layout_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/no_favorite_data"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/font_color" />
 
                 <ListView
+                    android:id="@+id/listView_rlzy_me_favorite"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:id="@+id/listView_rlzy_me_favorite"
                     android:background="@drawable/layout_border" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_cwzx_me_favorite"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_below="@id/layout_rlzy_me_favorite"
-                android:orientation="vertical"
-                android:id="@+id/layout_cwzx_me_favorite"
-                android:background="@drawable/layout_border">
+                android:background="@drawable/layout_border"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/title_cwzx_me_favorite"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/layout_border"
                     android:gravity="center_vertical"
                     android:text="@string/title_item_cwzx_favorite"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/list_title_color"
-                    android:background="@drawable/layout_border" />
+                    android:textColor="@color/list_title_color" />
+
+                <TextView
+                    android:id="@+id/text_no_data_cwzx_me_favorite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/layout_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/no_favorite_data"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/font_color" />
 
                 <ListView
+                    android:id="@+id/listView_cwzx_me_favorite"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:id="@+id/listView_cwzx_me_favorite"
                     android:background="@drawable/layout_border" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_itzc_me_favorite"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_below="@id/layout_cwzx_me_favorite"
-                android:orientation="vertical"
-                android:id="@+id/layout_itzc_me_favorite"
-                android:background="@drawable/layout_border">
+                android:background="@drawable/layout_border"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/title_itzc_me_favorite"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/layout_border"
                     android:gravity="center_vertical"
                     android:text="@string/title_item_itzc_favorite"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/list_title_color"
-                    android:background="@drawable/layout_border" />
+                    android:textColor="@color/list_title_color" />
+
+                <TextView
+                    android:id="@+id/text_no_data_itzc_me_favorite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/layout_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/no_favorite_data"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/font_color" />
 
                 <ListView
+                    android:id="@+id/listView_itzc_me_favorite"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:id="@+id/listView_itzc_me_favorite"
                     android:background="@drawable/layout_border" />
             </LinearLayout>
         </RelativeLayout>

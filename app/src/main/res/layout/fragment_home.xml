@@ -191,7 +191,7 @@
                         android:id="@+id/imageView_RMWD_LOGO_1"
                         android:layout_width="50dp"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/logo_xz" />
+                        android:src="@drawable/logo_xzfw" />
 
                     <TextView
                         android:id="@+id/textView_RMWD_1"
@@ -227,7 +227,7 @@
                         android:id="@+id/imageView_RMWD_LOGO_2"
                         android:layout_width="50dp"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/logo_rl" />
+                        android:src="@drawable/logo_rlzy" />
 
                     <TextView
                         android:id="@+id/textView_RMWD_2"
@@ -264,7 +264,7 @@
                         android:id="@+id/imageView_RMWD_LOGO_3"
                         android:layout_width="50dp"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/logo_it" />
+                        android:src="@drawable/logo_itzc" />
 
                     <TextView
                         android:id="@+id/textView_RMWD_3"
@@ -319,7 +319,7 @@
                         android:id="@+id/imageView_ZXGX_LOGO_1"
                         android:layout_width="50dp"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/logo_xz" />
+                        android:src="@drawable/logo_xzfw" />
 
                     <TextView
                         android:id="@+id/textView_ZXGX_1"
@@ -356,7 +356,7 @@
                         android:id="@+id/imageView_ZXGX_LOGO_2"
                         android:layout_width="50dp"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/logo_rl" />
+                        android:src="@drawable/logo_rlzy" />
 
                     <TextView
                         android:id="@+id/textView_ZXGX_2"
@@ -393,7 +393,7 @@
                         android:layout_width="50dp"
                         android:layout_height="fill_parent"
                         android:id="@+id/imageView_ZXGX_LOGO_3"
-                        android:src="@drawable/logo_it" />
+                        android:src="@drawable/logo_itzc" />
 
                     <TextView
                         android:layout_width="wrap_content"

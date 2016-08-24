@@ -19,6 +19,16 @@
             android:src="@drawable/icon_return" />
 
         <TextView
+            android:id="@+id/return_text_more_proposal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/return_icon_more_proposal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/back"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/pager_title_color" />
+
+        <TextView
             android:id="@+id/toolbar_more_proposal"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"

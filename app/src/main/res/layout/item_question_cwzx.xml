@@ -7,7 +7,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/imageView_question_logo"
-        android:src="@drawable/logo_top" />
+        android:src="@drawable/logo_top_cwzx" />
 
     <TextView
         android:id="@+id/item_question_title"

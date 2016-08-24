@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.ruptech.ai.MainActivity;
 import com.ruptech.ai.R;
+import com.ruptech.ai.main.QuestionFragment;
 import com.ruptech.ai.utils.Utils;
 
 import butterknife.ButterKnife;
@@ -32,6 +33,8 @@ public class QuestionLoadingFragment extends Fragment {
     TextView toolbar;
     @InjectView(R.id.return_icon_question_loading)
     ImageView returnIcon;
+    @InjectView(R.id.return_text_question_loading)
+    TextView returnText;
 
     MediaPlayer mMediaMusic = null;
 
@@ -48,6 +51,7 @@ public class QuestionLoadingFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        QuestionFragment.currentMainFragment = QuestionFragment.KIND_LOADING;
         type = getArguments().getString(MainActivity.EXTRA_TYPE);
         index = new Integer(getArguments().getString(MainActivity.EXTRA_INDEX)).intValue();
     }
@@ -80,6 +84,13 @@ public class QuestionLoadingFragment extends Fragment {
                 moveToQuestionListFragment();
             }
         });
+        returnText.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToQuestionListFragment();
+            }
+        });
 
         // 创建MediaPlayer 这里用的音频格式是mp3
         mMediaMusic = MediaPlayer.create(getActivity(), R.raw.robot_waiting);
@@ -106,7 +117,7 @@ public class QuestionLoadingFragment extends Fragment {
                     mHandler.removeCallbacks(timeOutTask);
                 }
 
-                Toast.makeText(getActivity(), "timeout", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), getString(R.string.timeout), Toast.LENGTH_LONG).show();
 
             } else if (msg.what == MSG_INIT_OK) {
 
@@ -114,7 +125,9 @@ public class QuestionLoadingFragment extends Fragment {
                     mHandler.removeCallbacks(timeOutTask);
                 }
 
-                moveToQuestionDetailFragment();
+                if(QuestionFragment.KIND_LOADING.equals(QuestionFragment.currentMainFragment)) {
+                    moveToQuestionDetailFragment();
+                }
             } else if (msg.what == MSG_INIT_INFO) {
 
 
@@ -141,7 +154,7 @@ public class QuestionLoadingFragment extends Fragment {
                     if (!isTimeout) {
                         // 初始化
                         try {
-                            Thread.currentThread().sleep(2500);
+                            Thread.currentThread().sleep(3500);
                         } catch (InterruptedException ie) {
                             ie.printStackTrace();
                         }

@@ -55,6 +55,9 @@ public class MainActivity extends ActionBarActivity {
 
     public static final String EXTRA_TITLE = "EXTRA_TITLE";
     public static final String EXTRA_CONTNET = "EXTRA_CONTNET";
+    public static final String EXTRA_ACTION = "EXTRA_ACTION";
+
+    public static final String BROADCAST_FAVORITE = "BROADCAST_FAVORITE";
 
     public static final int TAKE_PHOTO = 1;
 

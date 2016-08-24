@@ -53,7 +53,7 @@ public class LoadingByeActivity extends Activity {
                     mHandler.removeCallbacks(timeOutTask);
                 }
 
-                Toast.makeText(LoadingByeActivity.this, "timeout", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoadingByeActivity.this, getString(R.string.timeout), Toast.LENGTH_LONG).show();
                 LoadingByeActivity.this.finish();
 
             } else if (msg.what == MSG_INIT_OK) {

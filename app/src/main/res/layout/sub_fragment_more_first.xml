@@ -14,7 +14,7 @@
         android:textColor="@color/pager_title_color"
         android:background="@drawable/layout_border" />
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -22,40 +22,54 @@
         android:gravity="center_horizontal"
         android:background="@color/primary">
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="100dp"
-            android:id="@+id/imageView_more_first_about"
-            android:src="@drawable/more_about"
-            android:layout_marginTop="50dp" />
-
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/about_title"
-            android:id="@+id/textView_more_first_about"
-            android:textAlignment="center"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/font_color" />
+            android:layout_marginTop="50dp"
+            android:layout_alignParentTop="true">
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="100dp"
-            android:id="@+id/imageView_more_first_proposal"
-            android:src="@drawable/more_proposal"
-            android:layout_marginTop="50dp" />
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:id="@+id/imageView_more_first_about"
+                android:src="@drawable/more_about" />
 
-        <TextView
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/about_title"
+                android:id="@+id/textView_more_first_about"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/font_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/proposal_title"
-            android:id="@+id/textView_more_first_proposal"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/font_color" />
-    </LinearLayout>
+            android:layout_marginBottom="50dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:id="@+id/imageView_more_first_proposal"
+                android:src="@drawable/more_proposal" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/proposal_title"
+                android:id="@+id/textView_more_first_proposal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/font_color" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

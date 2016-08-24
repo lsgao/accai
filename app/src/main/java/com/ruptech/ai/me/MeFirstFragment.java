@@ -18,6 +18,7 @@ import com.ruptech.ai.LoginActivity;
 import com.ruptech.ai.R;
 import com.ruptech.ai.MainActivity;
 import com.ruptech.ai.loading.LoadingByeActivity;
+import com.ruptech.ai.main.MeFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -60,6 +61,8 @@ public class MeFirstFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
+        MeFragment.currentMainFragment = MeFragment.KIND_FIRST;
     }
 
     @Override

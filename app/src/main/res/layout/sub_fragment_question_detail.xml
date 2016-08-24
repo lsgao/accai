@@ -29,6 +29,16 @@
                     android:src="@drawable/icon_return" />
 
                 <TextView
+                    android:id="@+id/return_text_question_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/return_icon_question_detail"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/back"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/pager_title_color" />
+
+                <TextView
                     android:id="@+id/toolbar_question_detail"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
@@ -52,7 +62,7 @@
                     android:id="@+id/textView_question_detail"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:autoLink="all"
+                    android:autoLink="web|email"
                     android:text="Question Content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/font_color" />
@@ -61,14 +71,16 @@
                     android:id="@+id/image_xzfw_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/qrcode" />
+                    android:src="@drawable/qrcode"
+                    android:visibility="gone" />
 
                 <TableLayout
                     android:id="@+id/table_rlzy_14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/font_color"
-                    android:padding="0.5dip">
+                    android:padding="0.5dip"
+                    android:visibility="gone">
 
                     <TableRow
                         android:layout_width="wrap_content"
@@ -399,7 +411,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/font_color"
-                    android:padding="0.5dip">
+                    android:padding="0.5dip"
+                    android:visibility="gone">
 
                     <TableRow
                         android:layout_width="wrap_content"
@@ -526,7 +539,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/font_color"
-                    android:padding="0.5dip">
+                    android:padding="0.5dip"
+                    android:visibility="gone">
 
                     <TableRow
                         android:layout_width="wrap_content"
@@ -648,6 +662,158 @@
                     </TableRow>
                 </TableLayout>
 
+                <TableLayout
+                    android:id="@+id/table_itzc_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/font_color"
+                    android:padding="0.5dip"
+                    android:visibility="gone">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/font_color">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="0.5dip"
+                            android:background="@color/primary"
+                            android:gravity="center"
+                            android:text="设备型号"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="0.5dip"
+                            android:background="@color/primary"
+                            android:gravity="center"
+                            android:text="注意"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/primary"
+                            android:gravity="center"
+                            android:text="说明"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="205dp"
+                        android:layout_marginTop="0.5dip"
+                        android:background="@color/font_color">
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell11"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="0.5dip"
+                            android:background="@color/primary"
+                            android:text="&lt;b&gt;LG devices: &lt;/b&gt;&lt;br/&gt;●　G2 &lt;br/&gt;●　G3 &lt;br/&gt;●　G4 &lt;br/&gt;&lt;b&gt;Select Samsung Galaxy devices*: &lt;/b&gt;&lt;br/&gt;●　A3, A5, A7 &lt;br/&gt;●　Alpha &lt;br/&gt;●　Note 2, 3, 4, 5 and 8 &lt;br/&gt;●　Note 10.1 (2014 edition) &lt;br/&gt;●　Note Edge &lt;br/&gt;●　S3, S4, S4 Mini, S5, S5 Mini &lt;br/&gt;●　Samsung Galaxy S6/ S6 Edge/ S6 Edge Plus (Android Version 5.1.1 and above)&lt;br/&gt;●　S7 &lt;br/&gt;●　Tab 3 10.1, Tab 4, Tab S, Tab PRO "
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell12"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="0.5dip"
+                            android:background="@color/primary"
+                            android:text="不加密的设备需要先进行加密，这个加密过程可能需要1个小时左右的时间，这取决于设备上面的数据多少。&lt;br/&gt;\n设备必须保证不低于80%的电量，在不加密过程中不允许访问设备。&lt;br/&gt;\n注意：安卓6.0系统不包含解密选项，解密的唯一途径就是恢复出厂设置。\n加密之前，一定要备份手机里面的个人数据，以防丢失。"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell13"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/primary"
+                            android:text="&lt;a href=&quot;https://support.accenture.com/applications/MDM/Pages/AndroidEnrollment_Native.aspx&quot;&gt;Android Native enrollment instructions&lt;/a&gt;"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="0.5dip"
+                        android:background="@color/font_color">
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell21"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="0.5dip"
+                            android:background="@color/primary"
+                            android:text="&lt;b&gt;HTC devices*: &lt;/b&gt;&lt;br/&gt;●　One "
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell22"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="0.5dip"
+                            android:background="@color/primary"
+                            android:text="不加密的设备需要先进行加密，这个加密过程可能需要1个小时左右的时间，这取决于设备上面的数据多少。&lt;br/&gt;\n设备必须保证不低于80%的电量，在不加密过程中不允许访问设备。"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell23"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/primary"
+                            android:text="&lt;a href=&quot;https://support.accenture.com/applications/MDM/Pages/AndroidEnrollment_Native.aspx&quot;&gt;Android Native enrollment instructions&lt;/a&gt;"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="0.5dip"
+                        android:background="@color/font_color">
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell31"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="0.5dip"
+                            android:background="@color/primary"
+                            android:text="&lt;b&gt;All other Android devices:&lt;/b&gt;"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell32"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="0.5dip"
+                            android:background="@color/primary"
+                            android:text="●　Touchdown是一个第三方厂商生产的程序，用它可以加密公司的邮件和日历。&lt;br/&gt;●　注册MDM，你的安卓系统不能低于4.0版本。 &lt;br/&gt;●　如果你的版本低于4.0，需要进行升级 &lt;a href=&quot;https://support.accenture.com/technology/MobileDevicesandTelephony/Pages/SupportedandRecommendedMobileDevices.aspx&quot;&gt;supported device&lt;/a&gt;"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/text_itzc_13_cell33"
+                            android:layout_width="80dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/primary"
+                            android:text="&lt;a href=&quot;https://support.accenture.com/applications/MDM/Pages/AndroidEnrollment_Native.aspx&quot;&gt;Android Native enrollment instructions&lt;/a&gt;"
+                            android:textColor="@color/font_color"
+                            android:textSize="8dp" />
+                    </TableRow>
+                </TableLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -676,7 +842,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:text="@string/button_praise" />
+                            android:text="@string/button_praise"
+                            android:textSize="12dp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -700,7 +867,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:text="@string/button_favorite" />
+                            android:text="@string/button_favorite"
+                            android:textSize="12dp" />
                     </LinearLayout>
 
                 </LinearLayout>

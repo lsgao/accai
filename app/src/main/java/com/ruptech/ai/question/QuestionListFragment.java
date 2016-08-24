@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.ruptech.ai.R;
 import com.ruptech.ai.MainActivity;
+import com.ruptech.ai.main.QuestionFragment;
 import com.ruptech.ai.utils.Utils;
 
 import butterknife.ButterKnife;
@@ -50,6 +51,7 @@ public class QuestionListFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        QuestionFragment.currentMainFragment = QuestionFragment.KIND_LIST;
         type = getArguments().getString(MainActivity.EXTRA_TYPE);
         items = initItems();
     }
@@ -61,26 +63,38 @@ public class QuestionListFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.sub_fragment_question_list, container, false);
         ButterKnife.inject(this, rootView);
 
+        SimpleAdapter adapter = null;
+
         if (MainActivity.TYPE_XZFW.equals(type)) {
             String title = getString(R.string.title_item_xzfw);
             toolbar.setText(title);
             top_question_list.setImageResource(R.drawable.category_top_xzfw);
+            adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question_xzfw,
+                    new String[]{"TITLE"},
+                    new int[]{R.id.item_question_title});
         } else if (MainActivity.TYPE_RLZY.equals(type)) {
             String title = getString(R.string.title_item_rlzy);
             toolbar.setText(title);
             top_question_list.setImageResource(R.drawable.category_top_rlzy);
+            adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question_rlzy,
+                    new String[]{"TITLE"},
+                    new int[]{R.id.item_question_title});
         } else if (MainActivity.TYPE_CWZX.equals(type)) {
             String title = getString(R.string.title_item_cwzx);
             toolbar.setText(title);
-            //top_question_list.setImageResource(R.drawable.category_top_cwzx);
+//            top_question_list.setImageResource(R.drawable.category_top_cwzx);
+            adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question_cwzx,
+                    new String[]{"TITLE"},
+                    new int[]{R.id.item_question_title});
         } else if (MainActivity.TYPE_ITZC.equals(type)) {
             String title = getString(R.string.title_item_itzc);
             toolbar.setText(title);
             top_question_list.setImageResource(R.drawable.category_top_itzc);
+            adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question_itzc,
+                    new String[]{"TITLE"},
+                    new int[]{R.id.item_question_title});
         }
-        SimpleAdapter adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question,
-                new String[]{"TITLE"},
-                new int[]{R.id.item_question_title});
+
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -102,7 +116,6 @@ public class QuestionListFragment extends Fragment {
         } else if (MainActivity.TYPE_CWZX.equals(type)) {
             titles = MainActivity.cwzx_titles;
         } else if (MainActivity.TYPE_ITZC.equals(type)) {
-            titles = MainActivity.itzc_titles;
             titles = MainActivity.itzc_titles;
         }
         List<Map<String, Object>> result = new ArrayList<Map<String, Object>>();

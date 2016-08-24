@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/gif_waiting"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/proposal_title"
+        android:text="@string/loading"
         android:id="@+id/words_waiting"
         android:gravity="center_horizontal"
         android:textColor="@color/list_title_color" />

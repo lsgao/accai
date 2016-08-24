@@ -20,6 +20,9 @@ public class QuestionFragment extends Fragment {
 
     public static final String KIND_LIST = "list";
     public static final String KIND_DETAIL = "detail";
+    public static final String KIND_LOADING = "loading";
+
+    public static String currentMainFragment = KIND_LIST;
 
     private String type;
     private int index;
