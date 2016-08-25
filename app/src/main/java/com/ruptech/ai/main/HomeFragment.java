@@ -366,11 +366,11 @@ public class HomeFragment extends Fragment {
         return rootView;
     }
 
-    public void displayQuestion(String type, int index) {
+    private void displayQuestion(String type, int index) {
         moveToQuestionLoadingFragment(type, index);
     }
 
-//    public void moveToQuestionDetailFragment(String type, int index) {
+//    private void moveToQuestionDetailFragment(String type, int index) {
 //        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 //
 //        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
@@ -380,7 +380,7 @@ public class HomeFragment extends Fragment {
 //        ((MainActivity) getActivity()).pager.setCurrentItem(1);
 //    }
 
-    public void moveToQuestionLoadingFragment(String type, int index) {
+    private void moveToQuestionLoadingFragment(String type, int index) {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         Fragment target = QuestionLoadingFragment.newInstance(type, new Integer(index).toString());
         ft.replace(R.id.question_main_fragment, target);
@@ -390,7 +390,7 @@ public class HomeFragment extends Fragment {
         ((MainActivity) getActivity()).pager.setCurrentItem(1);
     }
 
-    public void moveToQuestionListFragment(String type) {
+    private void moveToQuestionListFragment(String type) {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         Fragment target = QuestionListFragment.newInstance(type);
         ft.replace(R.id.question_main_fragment, target);
@@ -400,7 +400,7 @@ public class HomeFragment extends Fragment {
         ((MainActivity) getActivity()).pager.setCurrentItem(1);
     }
 
-    public void moveToQuestionBuildingFragment(String title, String content) {
+    private void moveToQuestionBuildingFragment(String title, String content) {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         Fragment target = BuildingFragment.newInstance(title, content);
         ft.replace(R.id.question_main_fragment, target);

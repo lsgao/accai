@@ -1,67 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/toolbar_question_list"
-        android:gravity="center_vertical|center_horizontal"
-        android:textColor="@color/pager_title_color"
-        android:background="@color/primary" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_question_list"
+    <RelativeLayout
         android:id="@+id/top_question_list"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:src="@drawable/accenture_top"
-        android:layout_gravity="center" />
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/layout_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/return_icon_question_list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:src="@drawable/icon_return" />
+
+        <TextView
+            android:id="@+id/return_text_question_list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/return_icon_question_list"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/back"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/pager_title_color" />
+
+        <TextView
+            android:id="@+id/toolbar_question_list"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/pager_title_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/img_question_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_question_list"
+        android:background="@drawable/category_top_xzfw" />
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/subtitle_question_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/subtitle_question_list"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/top_question_list"
-        android:background="@color/primary">
+        android:layout_below="@+id/img_question_list"
+        android:background="@color/primary"
+        android:orientation="vertical">
+
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@color/primary"
-            android:gravity="center_vertical"
-            android:layout_marginTop="20dp">
+            android:layout_height="50dp"
+            android:layout_below="@+id/img_home"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="top"
+            android:background="@color/border_color"
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/top10questions"
                 android:id="@+id/textView_RMWD_TITLE"
-                android:textColor="@color/list_title_color" />
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/primary"
+                android:text="@string/top10questions"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/list_title_color"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="0.01dip" />
+
         </LinearLayout>
 
+
+
+
+
+
+
+
+
+
+
+
+
         <ListView
+            android:id="@+id/listView_question_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/subtitle_question_list"
-            android:id="@+id/listView_question_list"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/layout_border" />
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

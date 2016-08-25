@@ -85,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/layout_border"
+            android:background="@color/primary"
             android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal">

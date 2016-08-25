@@ -70,7 +70,7 @@ public class UploadPhotoActivity extends ActionBarActivity {
     /*
      * 上传图片
      */
-    public void save(View view) {
+    private void save(View view) {
         try {
             saveFile(bitmap, PIC_NAME, App.SAVE_PIC_PATH);
         } catch (Exception e) {
@@ -82,7 +82,7 @@ public class UploadPhotoActivity extends ActionBarActivity {
     /*
      * 从相册获取
      */
-    public void gallery(View view) {
+    private void gallery(View view) {
         // 激活系统图库，选择一张图片
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
@@ -92,7 +92,7 @@ public class UploadPhotoActivity extends ActionBarActivity {
     /*
      * 从相机获取
      */
-    public void camera(View view) {
+    private void camera(View view) {
         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
         // 判断存储卡是否可以用，可用进行存储
         if (hasSdcard()) {

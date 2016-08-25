@@ -13,32 +13,31 @@
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/primary">
 
             <ImageView
                 android:id="@+id/toolbar_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/accenture_logo" />
+                android:src="@drawable/accenture_logo"
+                android:background="@drawable/layout_border" />
 
-            <ImageView
-                android:id="@+id/imageView_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
+            <RelativeLayout
+                android:id="@+id/img_home"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:layout_below="@+id/toolbar_home"
-                android:layout_gravity="center"
-                android:src="@drawable/robot_welcome_main" />
+                android:background="@drawable/robot_welcome_main" />
+
 
             <LinearLayout
                 android:id="@+id/linearLayout_categories"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/imageView_home"
-                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img_home"
                 android:layout_gravity="top"
-                android:background="@drawable/layout_border"
+                android:background="@color/border_color"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -47,8 +46,10 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_weight="1"
-                    android:background="@drawable/layout_border"
-                    android:orientation="vertical">
+                    android:background="@color/primary"
+                    android:orientation="vertical"
+                    android:layout_marginRight="0.01dip"
+                    android:layout_marginBottom="0.01dip">
 
                     <ImageView
                         android:id="@+id/imageView_category_xzfw"
@@ -74,8 +75,10 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_weight="1"
-                    android:background="@drawable/layout_border"
-                    android:orientation="vertical">
+                    android:background="@color/primary"
+                    android:orientation="vertical"
+                    android:layout_marginRight="0.01dip"
+                    android:layout_marginBottom="0.01dip">
 
                     <ImageView
                         android:id="@+id/imageView_category_rlzy"
@@ -101,8 +104,10 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_weight="1"
-                    android:background="@drawable/layout_border"
-                    android:orientation="vertical">
+                    android:background="@color/primary"
+                    android:orientation="vertical"
+                    android:layout_marginRight="0.01dip"
+                    android:layout_marginBottom="0.01dip">
 
                     <ImageView
                         android:id="@+id/imageView_category_cwzx"
@@ -128,8 +133,9 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_weight="1"
-                    android:background="@drawable/layout_border"
-                    android:orientation="vertical">
+                    android:background="@color/primary"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="0.01dip">
 
                     <ImageView
                         android:id="@+id/imageView_category_itzc"
@@ -170,12 +176,13 @@
 
                     <TextView
                         android:id="@+id/textView_RMWD_TITLE"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
                         android:gravity="center_vertical"
                         android:text="@string/rmwd_title"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/list_title_color" />
+                        android:textColor="@color/list_title_color"
+                        android:background="@color/primary" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -294,16 +301,18 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:background="@color/primary">
 
                     <TextView
                         android:id="@+id/textView_ZXGX_TITLE"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
                         android:gravity="center_vertical"
                         android:text="@string/zxgx_title"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/list_title_color" />
+                        android:textColor="@color/list_title_color"
+                        android:background="@color/primary" />
                 </LinearLayout>
 
                 <RelativeLayout

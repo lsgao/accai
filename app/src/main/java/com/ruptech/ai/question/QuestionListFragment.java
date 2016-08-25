@@ -18,6 +18,7 @@ import butterknife.InjectView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
@@ -34,8 +35,12 @@ public class QuestionListFragment extends Fragment {
     private List<Map<String, Object>> items;
     @InjectView(R.id.toolbar_question_list)
     TextView toolbar;
-    @InjectView(R.id.top_question_list)
-    ImageView top_question_list;
+    @InjectView(R.id.return_icon_question_list)
+    ImageView returnIcon;
+    @InjectView(R.id.return_text_question_list)
+    TextView returnText;
+    @InjectView(R.id.img_question_list)
+    RelativeLayout img_question_list;
     @InjectView(R.id.listView_question_list)
     ListView listView;
 
@@ -68,28 +73,28 @@ public class QuestionListFragment extends Fragment {
         if (MainActivity.TYPE_XZFW.equals(type)) {
             String title = getString(R.string.title_item_xzfw);
             toolbar.setText(title);
-            top_question_list.setImageResource(R.drawable.category_top_xzfw);
+            img_question_list.setBackgroundResource(R.drawable.category_top_xzfw);
             adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question_xzfw,
                     new String[]{"TITLE"},
                     new int[]{R.id.item_question_title});
         } else if (MainActivity.TYPE_RLZY.equals(type)) {
             String title = getString(R.string.title_item_rlzy);
             toolbar.setText(title);
-            top_question_list.setImageResource(R.drawable.category_top_rlzy);
+            img_question_list.setBackgroundResource(R.drawable.category_top_rlzy);
             adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question_rlzy,
                     new String[]{"TITLE"},
                     new int[]{R.id.item_question_title});
         } else if (MainActivity.TYPE_CWZX.equals(type)) {
             String title = getString(R.string.title_item_cwzx);
             toolbar.setText(title);
-//            top_question_list.setImageResource(R.drawable.category_top_cwzx);
+//            img_question_list.setBackgroundResource(R.drawable.category_top_cwzx);
             adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question_cwzx,
                     new String[]{"TITLE"},
                     new int[]{R.id.item_question_title});
         } else if (MainActivity.TYPE_ITZC.equals(type)) {
             String title = getString(R.string.title_item_itzc);
             toolbar.setText(title);
-            top_question_list.setImageResource(R.drawable.category_top_itzc);
+            img_question_list.setBackgroundResource(R.drawable.category_top_itzc);
             adapter = new SimpleAdapter(getActivity(), items, R.layout.item_question_itzc,
                     new String[]{"TITLE"},
                     new int[]{R.id.item_question_title});
@@ -103,6 +108,22 @@ public class QuestionListFragment extends Fragment {
                 onListItemClick(arg0, arg1, arg2, arg3);
             }
         });
+
+        returnIcon.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToHomeFragment();
+            }
+        });
+        returnText.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToHomeFragment();
+            }
+        });
+
         return rootView;
 
     }
@@ -130,7 +151,7 @@ public class QuestionListFragment extends Fragment {
         return result;
     }
 
-    public void onListItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+    private void onListItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
         displayQuestion(arg2);
     }
 
@@ -157,5 +178,8 @@ public class QuestionListFragment extends Fragment {
         ft.commit();
     }
 
+    private void moveToHomeFragment() {
+        ((MainActivity) getActivity()).pager.setCurrentItem(0);
+    }
 }
 

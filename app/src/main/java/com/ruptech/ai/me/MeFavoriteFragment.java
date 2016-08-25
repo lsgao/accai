@@ -262,15 +262,15 @@ public class MeFavoriteFragment extends Fragment {
         return index;
     }
 
-    public void onListItemClick(int index, String type) {
+    private void onListItemClick(int index, String type) {
         displayQuestion(type, index);
     }
 
-    public void displayQuestion(String type, int index) {
+    private void displayQuestion(String type, int index) {
         moveToQuestionLoadingFragment(type, index);
     }
 
-//    public void moveToQuestionDetailFragment(String type, int index) {
+//    private void moveToQuestionDetailFragment(String type, int index) {
 //        ((MainActivity) getActivity()).pager.setCurrentItem(1);
 //        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 //        Fragment target = QuestionDetailFragment.newInstance(type, new Integer(index).toString());
@@ -279,7 +279,7 @@ public class MeFavoriteFragment extends Fragment {
 //        ft.commit();
 //    }
 
-    public void moveToQuestionLoadingFragment(String type, int index) {
+    private void moveToQuestionLoadingFragment(String type, int index) {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         Fragment target = QuestionLoadingFragment.newInstance(type, new Integer(index).toString());
         ft.replace(R.id.question_main_fragment, target);
@@ -328,7 +328,7 @@ public class MeFavoriteFragment extends Fragment {
         broadcastManager.registerReceiver(broadcastReceiver, filter);
     }
 
-    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             properties = App.loadProperties(getActivity(), App.SAVE_FILE_PATH + "/" + QuestionDetailFragment.PROPERTIES_NAME);

@@ -109,7 +109,7 @@ public class QuestionLoadingFragment extends Fragment {
     int MSG_INIT_INFO = 2;
     int MSG_INIT_TIMEOUT = 9;
 
-    public Handler mHandler = new Handler() {
+    private Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
             if (msg.what == MSG_INIT_TIMEOUT) {
 

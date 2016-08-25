@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ruptech.ai.MainActivity;
@@ -23,6 +24,10 @@ public class BuildingFragment extends Fragment {
 
     @InjectView(R.id.toolbar_building)
     TextView toolbar_building;
+    @InjectView(R.id.return_icon_building)
+    ImageView returnIcon;
+    @InjectView(R.id.return_text_building)
+    TextView returnText;
     @InjectView(R.id.content_building)
     TextView content_building;
 
@@ -56,14 +61,32 @@ public class BuildingFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.sub_fragment_buiding, container, false);
         ButterKnife.inject(this, rootView);
 
-        if(null != title && !("").equals(title)) {
+        if (null != title && !("").equals(title)) {
             toolbar_building.setText(title);
         }
-        if(null != content && !("").equals(content)) {
+        if (null != content && !("").equals(content)) {
             content_building.setText(content);
         }
+
+        returnIcon.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToHomeFragment();
+            }
+        });
+        returnText.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                moveToHomeFragment();
+            }
+        });
         return rootView;
     }
 
+    private void moveToHomeFragment() {
+        ((MainActivity) getActivity()).pager.setCurrentItem(0);
+    }
 }
 

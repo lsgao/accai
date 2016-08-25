@@ -15,7 +15,7 @@
     <color name="pager_title_color">#cccccc</color>
     <color name="list_title_color">#ff9933</color>
     <color name="font_color">#aaaaaa</color>
-
+    <color name="border_color">#bfbfbf</color>
     <color name="item_status_color_doing">#ffc400</color>
     <color name="item_status_color_error">#9dff3f</color>
     <color name="item_status_color_well">#62c03e</color>
